@@ -11,6 +11,9 @@ $(document).ready(function() {
     $('#close-menu').click(function(){
         $('.navbar-collapse').removeClass('show');
     });
+    $('#demo').on('click', function(e) {
+        $('.width .collapse').addClass('show');//you can list several class names
+    });
 });
 
 function formatState (opt) {
