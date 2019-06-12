@@ -5,6 +5,12 @@ $(document).ready(function() {
         templateSelection: formatState
     });
     $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
+    $('#open-menu').click(function(){
+        $('.navbar-collapse').addClass('show');
+    });
+    $('#close-menu').click(function(){
+        $('.navbar-collapse').removeClass('show');
+    });
 });
 
 function formatState (opt) {

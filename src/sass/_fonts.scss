@@ -1,39 +1,44 @@
 @font-face {
-	font-family: 'SansProBold';
+	font-family: 'SansPro';
+	font-weight: 700;
 	src: url('../fonts/SourceSansPro-Bold.eot') format('eot'),
 		url('../fonts/SourceSansPro-Bold.svg') format('svg'),
 		url('../fonts/SourceSansPro-Bold.ttf') format('ttf'),
-		url('../fonts/SourceSansPro-Bold.woff') format('woff')
+		url('../fonts/SourceSansPro-Bold.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'SansProLight';
+	font-family: 'SansPro';
+	font-weight: 300;
 	src: url('../fonts/SourceSansPro-Light.eot') format('eot'),
 	url('../fonts/SourceSansPro-Light.svg') format('svg'),
 	url('../fonts/SourceSansPro-Light.ttf') format('ttf'),
-	url('../fonts/SourceSansPro-Light.woff') format('woff')
+	url('../fonts/SourceSansPro-Light.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'SansProExtraLight';
+	font-family: 'SansPro';
+	font-weight: 200;
 	src: url('../fonts/SourceSansPro-ExtraLight.eot') format('eot'),
 	url('../fonts/SourceSansPro-ExtraLight.svg') format('svg'),
 	url('../fonts/SourceSansPro-ExtraLight.ttf') format('ttf'),
-	url('../fonts/SourceSansPro-ExtraLight.woff') format('woff')
+	url('../fonts/SourceSansPro-ExtraLight.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'SansProExtraRegular';
+	font-family: 'SansPro';
+	font-weight: 400;
 	src: url('../fonts/SourceSansPro-Regular.eot') format('eot'),
 	url('../fonts/SourceSansPro-Regular.svg') format('svg'),
 	url('../fonts/SourceSansPro-Regular.ttf') format('ttf'),
-	url('../fonts/SourceSansPro-Regular.woff') format('woff')
+	url('../fonts/SourceSansPro-Regular.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'SansProExtraSemiBold';
+	font-family: 'SansPro';
+	font-weight: 600;
 	src: url('../fonts/SourceSansPro-SemiBold.eot') format('eot'),
 	url('../fonts/SourceSansPro-SemiBold.svg') format('svg'),
 	url('../fonts/SourceSansPro-SemiBold.ttf') format('ttf'),
-	url('../fonts/SourceSansPro-SemiBold.woff') format('woff')
+	url('../fonts/SourceSansPro-SemiBold.woff') format('woff');
 }

@@ -28,7 +28,7 @@ html {
 body {
 	color: $color-black;
 	background: $color-white;
-	font-family: $font-family-sans-regular;
+	font-family: $font-family-sans-pro;
 }
 
 .link {
@@ -46,7 +46,7 @@ body {
 .toolbar {
 	height: 45px;
 	color: $color-black;
-	font-family: $font-family-sans-regular;
+	font-weight: 400;
 	@media (max-width: $screen-sm-max) {
 		display: none !important;
 	}
@@ -69,14 +69,14 @@ body {
 		}
 	}
 	.contacts {
-		font-family: $font-family-sans-extra-light;
+		font-weight: 200;
 		color: $color-white;
 		a {
 			i{
 				padding-right: 5px;
 			}
 			span {
-				font-family: $font-family-sans-regular;
+				font-weight: 300;
 				padding-right: 5px;
 			}
 			&:hover {
@@ -92,20 +92,20 @@ body {
 		}
 	}
 	.social {
-		font-family: $font-family-sans-extra-light;
+		font-weight: 200;
 		color: $color-white;
 		.link {
 			text-decoration: none;
-				a {
-					i{
-						padding-right: 5px;
-					}
-				}
-				&::after {
-				content: "|";
-				padding: 0 5px;
+			a {
+				i{
+					padding-right: 5px;
 				}
 			}
+			&::after {
+				content: "|";
+				padding: 0 5px;
+			}
+		}
 		.select-wrap {
 			.select2-selection.select2-selection--single {
 				outline: none;
@@ -148,6 +148,7 @@ body {
 }
 
 .wrap-menu {
+	position: relative;
 	background: #ffffff;
 	-webkit-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.3);
@@ -160,12 +161,24 @@ body {
 		font-family: FontAwesome, serif;
 		content: "\f107";
 	}
+	@media (max-width: 991px) {
+		.dropdown-toggle:after{
+			border: none;
+			color: #4c84d2;
+			display: inline-block;
+			vertical-align: 0;
+			font-family: FontAwesome, serif;
+			content: "\f107";
+			position: absolute;
+			right: 0;
+		}
+	}
 }
 
 .dropdown-menu {
 	border: none;
 	border-radius: 0;
-	top: 80px;
+	top: 72px;
 	left: 50%;
 	transform: translate(-50%, 0);
 	padding: 10px 0 0 0;
@@ -173,14 +186,143 @@ body {
 	-webkit-box-shadow: 1px 3px 6px 0 rgba(0,0,0,0.22);
 	-moz-box-shadow: 1px 3px 6px 0 rgba(0,0,0,0.22);
 	box-shadow: 1px 3px 6px 0 rgba(0,0,0,0.22);
+	@media (max-width: 991px) {
+		background: #fff;
+	}
+}
+
+.navbar-nav .dropdown-menu {
+	@media (max-width: 991px) {
+		position: inherit;
+		top: 0;
+	};
+}
+
+.dropdown-menu.show {
+	@media (max-width: 991px) {
+		display: block;
+		box-shadow: none;
+		padding: 0;
+		margin: 5px 0;
+	};
 }
 
 .dropdown-item {
 	padding: 5px 10px;
 	border-bottom: 1px solid #cfd7e0;
+	@media (max-width: 991px) {
+		border-bottom: none;
+		padding: 5px 30px;
+	};
 }
 
+.navbar-light .navbar-nav .active> .nav-link {
+	color: #4c84d2;
+}
 
-.navbar {
-	height: 125px;
+.navbar-brand {
+	img {
+		width: 380px;
+	}
+	@media (max-width: $screen-sm-max) {
+		img {
+			width: 300px;
+		}
+	}
+	@media (max-width: $screen-xxs-max) {
+		img {
+			width: 200px;
+		}
+	}
+}
+
+.navbar-light .navbar-toggler {
+	border: none;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+	outline: none;
+	box-shadow: none;
+}
+
+.navbar-collapse.collapse {
+	@media (max-width: 991px) {
+		transform: translateX(100%);
+		transition: transform 0.3s ease;
+		ul {
+			padding: 0 10px;
+		}
+		li {
+			border-bottom: 1px solid #cfd7e0;
+		}
+	}
+}
+
+.navbar-collapse.collapse.show {
+	transform: translateX(0);
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: rgb(255, 255, 255);
+}
+
+.navbar-contacts {
+	display: none;
+	@media (max-width: 991px) {
+		display: block;
+		background: #b4b4b475;
+		color: #565353;
+		padding: 15px 0;
+		width: 100%;
+		margin-top: 15px;
+	}
+	.wrap-contacts {
+		display: flex;
+		justify-content: center;
+	}
+	.icons {
+		@media (max-width: 991px) {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			padding: 5px 0;
+			margin-right: 15px;
+			i {
+				span {
+					font-weight: 600;
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+	.info {
+		@media (max-width: 991px) {
+			display: flex;
+			height: 100%;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+	}
+}
+
+.navbar-localization {
+	display: none;
+	@media (max-width: 991px) {
+		display: block;
+		-webkit-box-shadow: 0 7px 10px -7px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0 7px 10px -7px rgba(0,0,0,0.3);
+		box-shadow: 0 7px 10px -7px rgba(0,0,0,.3);
+		.wrap-btn {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 20px;
+				margin: 0 5px;
+			}
+		}
+	}
 }
