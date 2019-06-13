@@ -14,6 +14,17 @@ $(document).ready(function() {
     $('#demo').on('click', function(e) {
         $('.width .collapse').addClass('show');//you can list several class names
     });
+    $('.carousel-main').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: false,
+        autoHeight: false,
+        autoplayTimeout: 1500,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    })
 });
 
 function formatState (opt) {

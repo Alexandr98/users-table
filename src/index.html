@@ -177,13 +177,28 @@
 											<label for="message">
 												Something* <textarea name="message" id="message" cols="30" rows="10"></textarea>
 											</label>
-											<div class="checkbox"><input type="checkbox"/>Ich bit mit det<a>Datenshutzeklarunf</a> einvertanden</div>
-											<div class="checkbox"><input type="checkbox"/>Registrieren Sie sich fur den<a>Newsletter</a> und efrahren als erster von neune Angeboten</div>
+											<div class="checkbox">
+												<input id="first" type="checkbox" name="first" checked hidden />
+												<label for="first">Ich bit mit det<a>Datenshutzeklarunf</a> einvertanden</label>
+											</div>
+											<div class="checkbox">
+												<input id="second" type="checkbox" name="second" checked hidden />
+												<label for="second">IRegistrieren Sie sich fur den<a>Newsletter</a> und efrahren als erster von neune Angeboten</label>
+											</div>
 											<div class="checkboxs">
 												<p>Antwort bittle per:</p>
-												<span><input type="checkbox"/>E-mail</span>
-												<span><input type="checkbox"/>Telefon</span>
-												<span><input type="checkbox"/>WhatsApp</span>
+												<div class="checkbox">
+													<input id="email" type="checkbox" name="second" checked hidden />
+													<label for="email">Email</label>
+												</div>
+												<div class="checkbox">
+													<input id="telefon" type="checkbox" name="second" checked hidden />
+													<label for="telefon">Telefon</label>
+												</div>
+												<div class="checkbox">
+													<input id="WhatsApp" type="checkbox" name="second" checked hidden />
+													<label for="WhatsApp">WhatsApp</label>
+												</div>
 											</div>
 											<button type="submit">Anfrage senden</button>
 										</div>
@@ -268,44 +283,119 @@
 							</div>
 						</div>
 					</div>
-					<div class="filters">
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-					</div>
+<!--					<div class="filters">-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="meerblick" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="meerblick">Meerblick</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="Garage" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="Garage">Garage</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="diskret" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="diskret">diskret</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="pool" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="pool">Pool</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="aufzug" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="aufzug">Aufzug</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="reduziert" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="reduziert">reduziert</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="meerzugang" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="meerzugang">Meerzugang</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="dachterasse" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="dachterasse">Dachterasse</label></div>-->
+<!--							<div class="filter">-->
+<!--								<input id="Whats-App" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="Whats-App">WhatsApp</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="gelistet" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="gelistet">neu gelistet</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="strandlinie" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="strandlinie">1.Meer/Strandlinie</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="private" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="private">private Garten</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="neubauobjekt" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="neubauobjekt">Neubauobjekt</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="gym" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="gym">Gym</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="vermietung" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="vermietung">Vermietungslizenz</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter">-->
+<!--								<input id="reno" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="reno">Renovierungsobjekt</label>-->
+<!--							</div>-->
+<!--							<div class="filter">-->
+<!--								<input id="sauna" type="checkbox" name="second" checked hidden />-->
+<!--								<label for="sauna">Sauna</label>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="section-products">
-					<h2>SECTIONS</h2>
+                    <div class="title">
+					    <h2>Willkomen bei <img src="assets/Name.jpg" alt="brand"></h2>
+						<p>Die beste Auswahl an Apartment-Immobilien auf Mallorca, Ibiza und Menorca<br> Aktuell haben wir <span>253 Immobilien</span> im Angebot“.</p>
+                    </div>
+					<div class="wrap-card">
+						<div class="card">
+							<div class="card-slider">
+								<div class="col-carousel">
+									<div class="owl-carousel carousel-main">
+										<div class="img-badge"><span>DISKERT</span><img src="assets/slider1.jpg"></div>
+										<div class="img-badge"><span>EKSLUSIV</span><img src="assets/slider2.jpg"></div>
+										<div class="img-badge"><img src="assets/slider3.jpg"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-about">
+									<div class="card-title">
+										<p>Cala Murada - Mallorca</p>
+										<p>Ref.:MH2701</p>
+									</div>
+									<div class="card-icons">
+										<p></p>
+									</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
