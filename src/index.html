@@ -35,8 +35,8 @@
 								</div>
 								<div class="select-wrap">
 									<select class="country" data-width="fit">
-										<option value="flag1" data-image="/assets/Germany.png" label=""></option>
-										<option value="flag2" data-image="/assets/USA.png" label=""></option>
+										<option value="flag1" data-image="/assets/Germany.png" label="Germany"></option>
+										<option value="flag2" data-image="/assets/USA.png" label="Germany"></option>
 									</select>
 								</div>
 							</div>
@@ -57,7 +57,7 @@
 						<ul class="nav navbar-nav ml-auto">
 							<li class="nav-item active dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Immobilen</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<div class="dropdown-menu" >
 									<a class="dropdown-item" href="#">Neu im Angebot</a>
 									<a class="dropdown-item" href="#">Mallorca</a>
 									<a class="dropdown-item" href="#">Ibiza & Formentera</a>
@@ -68,7 +68,7 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verkaufen</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<div class="dropdown-menu" >
 									<a class="dropdown-item" href="#">Neu im Angebot</a>
 									<a class="dropdown-item" href="#">Mallorca</a>
 									<a class="dropdown-item" href="#">Ibiza & Formentera</a>
@@ -79,7 +79,7 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infos</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<div class="dropdown-menu" >
 									<a class="dropdown-item" href="#">Neu im Angebot</a>
 									<a class="dropdown-item" href="#">Mallorca</a>
 									<a class="dropdown-item" href="#">Ibiza & Formentera</a>
@@ -90,7 +90,7 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Uber Uns</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<div class="dropdown-menu" >
 									<a class="dropdown-item" href="#">Neu im Angebot</a>
 									<a class="dropdown-item" href="#">Mallorca</a>
 									<a class="dropdown-item" href="#">Ibiza & Formentera</a>
@@ -101,7 +101,7 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kontakt</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<div class="dropdown-menu" >
 									<a class="dropdown-item" href="#">Neu im Angebot</a>
 									<a class="dropdown-item" href="#">Mallorca</a>
 									<a class="dropdown-item" href="#">Ibiza & Formentera</a>
@@ -140,7 +140,7 @@
 				<div class="row">
 					<div class="wrap-form">
 						<div class="d-flex">
-							<div id="demo" class="width collapse show" aria-expanded="true">
+							<div id="demo" class="width collapse show" aria-expanded="true" role="form">
 								<div class="wrap-contacts">
 									<form class="form-contacts">
 										<h2>Directkontakt</h2>
@@ -209,14 +209,14 @@
 									</div>
 								</div>
 							</div>
-							<button role="button" class="btn btn-danger form-toggler position-relative" data-toggle="collapse" data-target="#demo" aria-expanded="true">
+							<button class="btn btn-danger form-toggler position-relative" data-toggle="collapse" data-target="#demo" aria-expanded="true">
 								<span>Kontakt<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>
 							</button>
 						</div>
 					</div>
 					<div class="badge">
 						<h2>VIP-Kunden-Service</h2>
-						<p>registrieren sie sich und efrahren<br> als erster von neunen angeboten</p>
+						<p>registrieren sie sich und efrahren als erster von neunen angeboten</p>
 					</div>
 				</div>
 			</div>
@@ -243,7 +243,9 @@
 								<select class="country" data-width="fit">
 									<option value="flag1" label="Alle Preise">Alle Preise</option>
 								</select>
-								<button type="button" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i><span>Suchen</span></button>
+								<div class="wrap-btn">
+									<button type="button" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i><span>Suchen</span></button>
+								</div>
 							</form>
 						</div>
 						<div class="column"></div>
@@ -257,37 +259,37 @@
 							</div>
 						</div>
 					</div>
-					<div class="filters">
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-						<div class="filter-column">
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>
-						</div>
-					</div>
+<!--					<div class="filters">-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--						<div class="filter-column">-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--							<div class="filter"><span>Meerblick</span><input type="checkbox"/></div>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 			</div>
 		</div>
