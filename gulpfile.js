@@ -23,12 +23,9 @@ sass.compiler = require('node-sass');
 var sass_src = './src/sass/main.scss',
 	sass_files = './src/sass/*.scss',
 	img_src = './src/assets/**/',
-	fonts_src = './src/fonts/*{ttf,woff,woff2,svg,eot}',
-	fa_fonts = 'node_modules/font-awesome/fonts/*{ttf,woff,woff2,svg,eot}',
-	roboto_fonts =
-		'node_modules/roboto-fontface/fonts/roboto/*{ttf,woff,woff2,svg,eot}',
+	fonts_src = './src/fonts/*',
 	html_src = './src/**/*.html',
-	js_src = './src/**/*.js',
+	js_src = './src/scripts/*.js',
 	dist = './dist',
 	html_dest = './dist/**/*.html',
 	assets = './dist/assets',
@@ -36,11 +33,7 @@ var sass_src = './src/sass/main.scss',
 	build = './dist/build/',
 	temp = './dist/build/temp/',
 	js_temp = './dist/build/temp/js',
-	css_temp = './dist/build/temp/css',
-	jquery = 'node_modules/jquery/dist/jquery.min.js',
-	popperjs = 'node_modules/popper.js/dist/umd/popper.min.js',
-	select2js = 'node_modules/select2/dist/js/select2.full.min.js',
-	bootstrap = 'node_modules/bootstrap/dist/js/bootstrap.min.js';
+	css_temp = './dist/build/temp/css';
 
 // hashing task
 gulp.task('hash', function() {
@@ -57,7 +50,6 @@ gulp.task(
 	'clean-build',
 	gulp.series('hash', done => {
 		return del([build]);
-		done();
 	}),
 );
 
@@ -65,12 +57,12 @@ gulp.task(
 gulp.task(
 	'update',
 	gulp.series('clean-build', function(done) {
+		console.log('updateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdate')
 		const manifest = gulp.src(assets + '/rev-manifest.json');
 		return gulp
 			.src(html_dest)
 			.pipe(revRewrite({ manifest }))
 			.pipe(gulp.dest(dist));
-		done();
 	}),
 );
 
@@ -89,15 +81,6 @@ gulp.task('build-sass', () => {
 		.pipe(browserSync.stream());
 });
 
-// bundle dependencies js
-gulp.task('vendor-js', done => {
-	return gulp
-		.src([jquery, popperjs, select2js, bootstrap])
-		.pipe(concat('vendor-bundle.js'))
-		.pipe(gulp.dest(build));
-	done();
-});
-
 // babel build task
 gulp.task('build-js', () => {
 	return gulp
@@ -114,14 +97,12 @@ gulp.task('build-js', () => {
 // bundle all js
 gulp.task(
 	'bundle-js',
-	gulp.series(gulp.parallel('vendor-js', 'build-js'), done => {
+	gulp.series(gulp.parallel('build-js'), done => {
 		return gulp
-			.src([build + 'vendor-bundle.js', build + 'main.js'])
+			.src(build + 'main.js')
 			.pipe(sourcemaps.init())
-			.pipe(concat('bundle.js'))
 			.pipe(sourcemaps.write())
 			.pipe(gulp.dest(js_temp));
-		done();
 	}),
 );
 
@@ -152,13 +133,12 @@ gulp.task(
 	'build-html',
 	gulp.series(function(done) {
 		return gulp.src(html_src).pipe(gulp.dest(dist));
-		done();
 	}),
 );
 
 // build fonts
 gulp.task('build-fonts', () => {
-	return gulp.src([fa_fonts, roboto_fonts, fonts_src]).pipe(gulp.dest(fonts));
+	return gulp.src(fonts_src).pipe(gulp.dest(fonts));
 });
 
 // build and minify
@@ -205,7 +185,7 @@ gulp.task('delete-assets', () => {
 // watching scss/js/html files
 gulp.task('watch', function(done) {
 	gulp.watch(sass_files, gulp.series('live-reload'));
-	gulp.watch('./src/*.js', gulp.series('live-reload'));
+	gulp.watch(js_src, gulp.series('live-reload'));
 	gulp.watch(html_src).on(
 		'change',
 		gulp.series(
