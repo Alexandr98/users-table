@@ -1034,13 +1034,60 @@ body {
 			}
 		}
 	}
+	.wrap-search {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 95px;
+		p {
+			margin: 0;
+		}
+		.search-products {
+			width: 295px;
+			position: relative;
+			padding: 10px 0;
+			.text-input {
+				outline: none;
+				width: 100%;
+				background-color: #338ac9;
+				height: 32px;
+				color: #338ac9;
+				border: 1px solid #338ac9;
+				padding-left: 17px;
+			}
+
+			::placeholder {
+				color: #fff;
+			}
+
+			.search-button {
+				background: #338ac9;
+				border: 0;
+				color: #fff;
+				display: inline-flex;
+				justify-content: center;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				width: 25px;
+				height: 25px;
+				transform: translate(0, -50%);
+			}
+
+			.search-button:focus {
+				outline: none;
+			}
+		}
+	}
 	.wrap-card {
 		height: 1000px;
 		.card {
 			width: 330px;
-			height: 380px;
+			height: 417px;
 			overflow: hidden;
 			position: relative;
+			margin: 0 65px 65px 0;
 			-webkit-box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.29);
 			-moz-box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.29);
 			box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.29);
@@ -1109,12 +1156,87 @@ body {
 					color: #4996ce;
 					display: flex;
 					justify-content: space-between;
-					padding: 0 20px;
+					padding: 0 10px;
 					p {
 						margin: 0;
 					}
 				}
-          }
+				.card-icons {
+					width: 100%;
+					padding: 0 10px;
+					p {
+						color: #757575;
+						font-size: 17px;
+					}
+					.wrap-icons {
+						display: flex;
+						justify-content: space-between;
+						.icon {
+							width: 40px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							color: #3b7eb1;
+							p {
+								color: #3b7eb1;
+							}
+						}
+					}
+				}
+				.card-price {
+					font-size: 25px;
+					display: flex;
+					justify-content: space-between;
+					padding: 0 10px;
+					width: 100%;
+					background: #3b7eb1;
+					color: $color-white;
+					.price-icon {
+						i {
+							padding:0 5px;
+						}
+					}
+				};
+          	}
+		}
+		.search-card {
+			max-width: 295px;
+			position: relative;
+			padding: 10px 0;
+			width: 100%;
+			margin: 0 auto;
+			.text-input {
+				outline: none;
+				width: 100%;
+				background-color: #338ac9;
+				height: 32px;
+				color: #338ac9;
+				border: 1px solid #338ac9;
+				padding-left: 17px;
+			}
+
+			::placeholder {
+				color: #fff;
+			}
+
+			.search-button {
+				background: #338ac9;
+				border: 0;
+				color: #fff;
+				display: inline-flex;
+				justify-content: center;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				width: 25px;
+				height: 25px;
+				transform: translate(0, -50%);
+			}
+
+			.search-button:focus {
+				outline: none;
+			}
 		}
 	}
 }
