@@ -1482,6 +1482,9 @@ body {
 		color: $color-white;
 		text-transform: uppercase;
 		font-weight: 200;
+		@media (max-width: 991px) {
+			display: none;
+		}
 		p {
 			font-weight: 300;
 			margin: 0;
