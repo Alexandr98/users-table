@@ -17,14 +17,40 @@ $(document).ready(function() {
     $('.carousel-main').owlCarousel({
         items: 1,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         autoHeight: false,
         autoplayTimeout: 1500,
         margin: 0,
         nav: true,
         dots: false,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-    })
+    });
+    $("#carousel").owlCarousel({
+        items: 3,
+        autoplay: false,
+        lazyLoad: true,
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        autoHeight: false,
+        autoplayTimeout: 7000,
+        smartSpeed: 800,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+
+            600: {
+                items: 2
+            },
+
+            1024: {
+                items: 3
+            },
+
+        }
+    });
 });
 
 function formatState (opt) {
