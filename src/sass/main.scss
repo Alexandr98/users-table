@@ -436,6 +436,7 @@ body {
 
 			.collapse.show {
 				visibility: visible;
+				z-index: 400;
 			}
 
 			.collapsing {
