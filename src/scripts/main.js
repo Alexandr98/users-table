@@ -14,6 +14,9 @@ $(document).ready(function() {
     $('#demo').on('click', function(e) {
         $('.width .collapse').addClass('show');//you can list several class names
     });
+    $('#icon').append('<i class="fa fa-toggle fa-chevron-circle-down" aria-hidden="true"></i>').click(function(){
+        $('.fa-toggle').toggleClass('fa-chevron-circle-down fa-chevron-circle-up')
+    });;
     $('.carousel-main').owlCarousel({
         items: 1,
         loop: true,
@@ -49,6 +52,27 @@ $(document).ready(function() {
                 items: 3
             },
 
+        }
+    });
+    $("#carousel-after-news").owlCarousel({
+        items: 2,
+        autoplay: false,
+        lazyLoad: true,
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        autoHeight: true,
+        autoplayTimeout: 7000,
+        smartSpeed: 800,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+
+            800: {
+                items: 2
+            },
         }
     });
 });
