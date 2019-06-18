@@ -30,7 +30,6 @@ body {
 	width: 300px;
 	position: relative;
 	padding: 10px 0;
-
 	.text-input {
 		outline: none;
 		width: 100%;
@@ -308,20 +307,19 @@ body {
 		}
 	}
 	@media (max-width: $screen-xxs-max) {
+		margin-right: 0;
 		img {
 			width: 200px;
-		}
-	}
-	@media (max-width: $screen-xxs-min) {
-		img {
-			width: 170px;
 		}
 	}
 }
 
 .navbar-light .navbar-toggler {
 	border: none;
-	margin-top: 7px;
+	@media (max-width: $screen-xxs-min) {
+		margin-bottom: 10px;
+		padding: 5px;
+	}
 }
 .navbar {
 	align-items: flex-end;
@@ -330,9 +328,6 @@ body {
 	}
 	ul {
 		margin-bottom: 10px;
-		@media (max-width: 991px) {
-			align-items: flex-start;
-		}
 	}
 }
 
@@ -434,6 +429,9 @@ body {
 	@media (max-width: 991px) {
 		max-height: 600px;
 	}
+	@media (max-width: 425px) {
+		max-height: 400px;
+	}
 
 		.wrap-form {
 			width: 100%;
@@ -452,7 +450,6 @@ body {
 			.collapsing {
 				visibility: visible;
 				height: 0;
-				-webkit-transition-property: height, visibility;
 				transition-property: height, visibility;
 				-webkit-transition-timing-function: ease-out;
 				transition-timing-function: ease-out;
@@ -802,6 +799,10 @@ body {
 		@media (max-width: 991px) {
 			top: 20%
 		}
+		@media (max-width: 425px) {
+			padding: 10px;
+			max-width: 210px;
+		}
 		h2 {
 			font-weight: 300;
 			@media (max-width: 1479px) {
@@ -852,7 +853,11 @@ body {
 				display: flex;
 				flex: 1;
 				flex-direction: column;
-
+				p  {
+					@media (max-width: $screen-xxs-min) {
+						font-size: 20px;
+					}
+				}
 				&:after {
 					content: "";
 					position: absolute;
@@ -874,6 +879,12 @@ body {
 			}
 
 			.wrap-search {
+				p {
+					@media (max-width: $screen-xxs-min) {
+						font-size: 20px;
+						font-weight: 300;
+					}
+				}
 				.search {
 					width: 295px;
 					position: relative;
@@ -1199,6 +1210,10 @@ body {
 				@media (max-width: 700px) {
 					width: 100%;
 				}
+				@media (max-width: 320px) {
+					margin: 20px 0;
+					padding: 0 15px;
+				}
 			}
 			p {
 				margin: 0;
@@ -1220,7 +1235,7 @@ body {
 				height: 32px;
 				color: #fff;
 				border: 1px solid #338ac9;
-				padding-left: 17px;
+				padding:0 15px;
 			}
 
 			::placeholder {
@@ -1240,6 +1255,9 @@ body {
 				width: 25px;
 				height: 25px;
 				transform: translate(0, -50%);
+				@media (max-width: 320px) {
+					right: 20px;
+				}
 			}
 
 			.search-button:focus {
@@ -1266,7 +1284,6 @@ body {
 						width: 100%;
 						max-width: 200px;
 						transform: rotate(-45deg);
-						background-color: #f38e1b;
 						left: -60px;
 						top: 30px;
 						text-align: center;
@@ -1312,6 +1329,24 @@ body {
 
 					button:focus, button:active {
 						outline: none;
+					}
+				}
+
+				.card-slider.orange{
+					span {
+						background-color: #f38e1b;
+					}
+				}
+
+				.card-slider.red{
+					span {
+						background-color: #f40606
+					}
+				}
+
+				.card-slider.blue{
+					span {
+						background-color: #338ac9
 					}
 				}
 
@@ -1401,6 +1436,9 @@ body {
 					@media (max-width: $screen-xs-max) {
 						width: 100%;
 					}
+					@media (max-width: $screen-xxs-min) {
+						padding: 0 15px;
+					}
 				}
 			}
 		}
@@ -1414,6 +1452,9 @@ body {
 		}
 		@media (max-width: $screen-sm-min) {
 			margin-top: 0px;
+		}
+		@media (max-width: $screen-xxs-min) {
+			margin: 30px 0;
 		}
 		.owl-carousel {
 			height: auto;
@@ -1430,6 +1471,9 @@ body {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					@media (max-width: $screen-xxs-min) {
+						top: 10px;
+					}
 					p {
 						font-weight: 300;
 						font-size: 20px;
@@ -1443,6 +1487,14 @@ body {
 					.search-products {
 						margin: 0 auto;
 						padding: 25px 0;
+						@media (max-width: $screen-xxs-min) {
+							padding: 0 35px;
+						}
+						.search-button {
+							@media (max-width: $screen-xxs-min) {
+								right: 45px;
+							}
+						}
 					}
 				}
 				.gradient {
@@ -1531,6 +1583,9 @@ body {
 	.wrap-mews {
 		display: flex;
 		margin-top: 220px;
+		@media (max-width: $screen-xxs-min) {
+			margin-top: 0;
+		}
 		.image {
 			@media (max-width: 1200px) {
 				display: none;
@@ -1623,6 +1678,15 @@ body {
 		#carousel-after-news {
 			.slide-title {
 				top: 30px;
+				@media (max-width: $screen-xxs-min) {
+					top: 5px;
+					h3 {
+						font-size: 23px;
+					}
+					p {
+						font-size: 15px;
+					}
+				}
 			}
 			.slide-title.blue{
 				color: #3b7eb1;
@@ -1633,6 +1697,9 @@ body {
 			.slide-input {
 				.search-products {
 					padding: 10px 0;
+					@media (max-width: $screen-xxs-min) {
+						padding: 10px 35px;
+					}
 				}
 			}
 		}
@@ -1643,13 +1710,14 @@ body {
 		border-top: 2px solid #338ac9;
 		background: #fff;
 		margin-top: 60px;
-		padding: 25px;
+		padding: 15px 0;
 		-webkit-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 		-moz-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 		box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 		p {
 			color: #837c7e;
 			font-style: italic;
+			padding: 0 15px;
 		}
 		form {
 			display: flex;
@@ -1667,6 +1735,7 @@ body {
 						flex-direction: column;
 					}
 					input {
+						height: 40px;
 						width: 100%;
 						max-width: 200px;
 						border: 1px solid #7ea6de;
@@ -1674,7 +1743,6 @@ body {
 						outline: none;
 						padding: 0 10px;
 						border-radius: 4px;
-						height: 28px;
 
 						@media (max-width: 1370px) {
 							max-width: 160px;
@@ -1686,7 +1754,7 @@ body {
 
 						@media (max-width: 1150px) {
 							max-width: 100%;
-							margin: 10px 0;
+							margin: 5px 0;
 						}
 
 					}
@@ -1697,14 +1765,17 @@ body {
 					.select2-container {
 						@media (max-width: 1155px) {
 							width: 100%;
-							margin: 10px 0;
+							margin: 5px 0;
 						}
 					}
 
 					.select2-selection.select2-selection--single {
 						outline: none;
 						width: 200px;
+						height: 40px;
 						border: 1px solid #7ea6de;
+						display: flex;
+						align-items: center;
 						@media (max-width: 1200px) {
 							font-size: 12px;
 						}
@@ -1718,7 +1789,8 @@ body {
 							display: flex;
 							align-items: center;
 							justify-content: center;
-
+							top: 7px;
+							right: 7px;
 							b {
 								display: none !important;
 							}
@@ -1755,7 +1827,7 @@ body {
 					flex-direction: column-reverse;
 				}
 				button {
-					height: 28px;
+					height: 40px;
 					width: 100%;
 					border-radius: 4px;
 					color: #fff;
@@ -1885,6 +1957,9 @@ body {
 	color: $color-white;
 	margin-top: 200px;
 	width: 100%;
+	@media (max-width: $screen-xxs-min) {
+		margin-top: 80px;
+	}
 	.wrap-sections {
 		display: flex;
 		width: 100%;
@@ -1899,10 +1974,19 @@ body {
 			@media (max-width: 991px) {
 				width: 100%;
 			}
+			@media (max-width: 425px) {
+				padding: 10px;
+			}
 			p {
-				margin: 25px 0 25px 25px;
+				font-weight: 300;
+				margin: 25px 0;
 				@media (max-width: 1150px) {
 					font-size: 15px;
+				}
+
+				@media (max-width: $screen-xxs-min) {
+					font-size: 13px;
+					padding-top: 30px;
 				}
 			}
 			&__title{
@@ -1912,14 +1996,20 @@ body {
 						width: 300px;
 					}
 				}
+				@media (max-width: $screen-xxs-min) {
+					margin-top: 0px;
+				}
 			}
 			&__contacts {
-				margin: 25px 0 25px 25px;
+				margin: 25px 0;
 				.wrap-contacts {
 					font-size: 25px;
 					font-weight: 200;
 					@media (max-width: 1150px) {
 						font-size: 15px;
+					}
+					@media (max-width: $screen-xxs-min) {
+						font-size: 12px;
 					}
 					i {
 						padding-right: 10px;
@@ -1927,8 +2017,11 @@ body {
 				}
 			}
 			&__social {
-				margin: 25px 0 25px 25px;
+				margin: 25px 0;
 				font-size: 25px;
+				@media (max-width: $screen-xxs-min) {
+					font-size: 23px;
+				}
 				a{
 					cursor: pointer;
 					&:not(:last-child) {
@@ -1943,11 +2036,18 @@ body {
 				position: absolute;
 				top: 70px;
 				right: 35px;
+				@media (max-width: 425px) {
+					top: 100px;
+					right: 10px;
+					img {
+						width: 120px;
+					}
+				}
 			}
 		}
 		.second-section{
 			width: 50%;
-			background: url('../assets/mac-footer.png') no-repeat;
+			background: url('../assets/mac-footer.png') no-repeat center;
 			background-size: cover;
 			-webkit-box-shadow: inset 0px 200px 41px -56px rgba(0,0,0,0.62);
 			-moz-box-shadow: inset 0px 200px 41px -56px rgba(0,0,0,0.62);
@@ -1971,11 +2071,13 @@ body {
 				}
 				h2 {
 					font-size: 50px;
+					font-weight: 200;
 					@media (max-width: 991px) {
 						font-size: 40px;
 					}
 				}
 				p {
+					font-weight: 200;
 					font-size: 20px;
 					@media (max-width: 991px) {
 						font-size: 15px;
@@ -2042,7 +2144,7 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		color: #000;
-		border-top:2px solid #f28c17;
+		border-top:5px solid #f28c17;
 		@media (max-width: 991px) {
 			flex-direction: column;
 			padding: 20px;
@@ -2062,8 +2164,14 @@ body {
 			align-items: center;
 			p {
 				margin: 0;
-				@media (max-width: $screen-xs-min) {
+				@media (max-width: 510px) {
 					display: none;
+				}
+			}
+			img {
+				padding-left: 10px;
+				@media (max-width: 510px) {
+					padding-top: 10px;
 				}
 			}
 		}

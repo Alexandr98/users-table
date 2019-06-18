@@ -84,7 +84,7 @@ function formatState (opt) {
 
     const optimage = $(opt.element).attr('data-image');
     if(!optimage){
-        return opt.text.toUpperCase();
+        return opt.text;
     } else {
         const $opt = $(
             '<span><img src="' + optimage + '" width="60px" alt="flag"/> ' + opt.text.toUpperCase() + '</span>'
