@@ -71,8 +71,13 @@ gulp.task('build-sass', () => {
 	return gulp
 		.src(sass_src)
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer())
 		.pipe(sass().on('error', sass.logError))
+		.pipe(
+			autoprefixer({
+				browsers: ['last 2 versions'],
+				cascade: false,
+			}),
+		)
 		.pipe(concat('style.css'))
 		.pipe(sourcemaps.write())
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
