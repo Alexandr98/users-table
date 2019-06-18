@@ -73,10 +73,7 @@ gulp.task('build-sass', () => {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(
-			autoprefixer({
-				browsers: ['last 2 versions'],
-				cascade: false,
-			}),
+			autoprefixer(),
 		)
 		.pipe(concat('style.css'))
 		.pipe(sourcemaps.write())
