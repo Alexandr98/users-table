@@ -36,6 +36,7 @@ body {
 		background-color: #338ac9;
 		height: 32px;
 		color: #fff;
+		border-radius: 4px;
 		border: 1px solid #338ac9;
 		padding-left: 17px;
 	}
@@ -316,7 +317,7 @@ body {
 
 .navbar-light .navbar-toggler {
 	border: none;
-	@media (max-width: $screen-xxs-min) {
+	@media (max-width: $screen-xxs-max) {
 		margin-bottom: 10px;
 		padding: 5px;
 	}
@@ -436,7 +437,7 @@ body {
 		.wrap-form {
 			width: 100%;
 			position: absolute;
-			top: 25%;
+			top: 20%;
 			left: 0;
 			@media (max-width: 991px) {
 				display: none;
@@ -810,6 +811,7 @@ body {
 			}
 		}
 		p {
+			font-style: italic;
 			font-size: 20px;
 			text-transform: uppercase;
 			border-left: 2px solid #f28c17;
@@ -880,7 +882,7 @@ body {
 
 			.wrap-search {
 				p {
-					@media (max-width: $screen-xxs-min) {
+					@media (max-width: $screen-xs-min) {
 						font-size: 20px;
 						font-weight: 300;
 					}
@@ -1157,7 +1159,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			@media (max-width: 320px) {
+			@media (max-width: $screen-xs-min) {
 				margin-top: 40px;
 			}
 			.logo {
@@ -1203,22 +1205,24 @@ body {
 			@media (max-width: 700px) {
 				flex-direction: column;
 			}
-			@media (max-width: 320px) {
+			@media (max-width: $screen-xs-min) {
 				margin-top: 40px;
 			}
 			.search-products {
 				@media (max-width: 700px) {
 					width: 100%;
 				}
-				@media (max-width: 320px) {
-					margin: 20px 0;
-					padding: 0 15px;
+				@media (max-width:$screen-xs-min) {
+					margin: 30px 0;
+					padding: 0 35px;
 				}
 			}
 			p {
 				margin: 0;
-				@media (max-width: 320px) {
+				@media (max-width: $screen-xs-min) {
 					text-align: center;
+					font-size: 16px;
+					font-weight: 300;
 				}
 			}
 		}
@@ -1259,8 +1263,8 @@ body {
 				width: 25px;
 				height: 25px;
 				transform: translate(0, -50%);
-				@media (max-width: 320px) {
-					right: 20px;
+				@media (max-width: $screen-xs-min) {
+					right: 40px;
 				}
 			}
 
@@ -1378,7 +1382,7 @@ body {
 						}
 						p {
 							color: #757575;
-							font-size: 17px;
+							font-size: 16px;
 						}
 
 						.wrap-icons {
@@ -1440,8 +1444,8 @@ body {
 					@media (max-width: $screen-xs-max) {
 						width: 100%;
 					}
-					@media (max-width: $screen-xxs-min) {
-						padding: 0 15px;
+					@media (max-width: $screen-xs-min) {
+						padding: 0 35px;
 					}
 				}
 			}
@@ -1455,7 +1459,7 @@ body {
 			margin-top: 80px;
 		}
 		@media (max-width: $screen-sm-min) {
-			margin-top: 0px;
+			margin-top: 40px;
 		}
 		@media (max-width: $screen-xxs-min) {
 			margin: 30px 0;
@@ -1467,7 +1471,7 @@ body {
 				.slide-title {
 					color: #fff;
 					position: absolute;
-					top: 60px;
+					top: 20px;
 					left: 0;
 					right: 0;
 					margin-left: auto;
@@ -1587,13 +1591,30 @@ body {
 	.wrap-mews {
 		display: flex;
 		margin-top: 220px;
-		@media (max-width: $screen-xxs-min) {
-			margin-top: 0;
+		@media (max-width: $screen-sm-min) {
+			margin-top: 90px;
+		}
+		@media (max-width: $screen-xs-min) {
+			margin-top: 30px;
 		}
 		.image {
 			@media (max-width: 1200px) {
-				display: none;
+				img {
+					width: 350px
+				}
 			}
+			@media (max-width: 823px) {
+				img {
+					width: 280px
+				}
+			}
+			@media (max-width: $screen-xs-min) {
+				img {
+					display: none;
+				}
+			}
+
+
 		}
 		.news {
 			color: #757575;
@@ -1601,10 +1622,13 @@ body {
 			flex-direction: column;
 			margin-left: 60px;
 			@media (max-width: 1200px) {
-				margin-left: 0;
+				margin-left: 30px;
 			}
 			@media (max-width: 510px) {
 				font-size: 15px;
+			}
+			@media (max-width: $screen-xs-min) {
+				margin-left: 0px;
 			}
 			p {
 				font-weight: 200;
@@ -1616,6 +1640,12 @@ body {
 				@media (max-width: 1200px) {
 					text-align: center;
 				}
+				@media (max-width: 640px) {
+					margin-bottom: 10px;
+				}
+				@media (max-width: 991px) {
+					font-size: 15px;
+				}
 			}
 			.news-title {
 				display: flex;
@@ -1623,23 +1653,23 @@ body {
 				@media (max-width: 1200px) {
 					justify-content: center;
 				}
-				@media (max-width: 510px) {
+				@media (max-width:753px) {
 					flex-direction: column;
 				}
 				h2 {
 					font-size: 40px;
 					padding-right: 10px;
 					font-weight: 300;
-					@media (max-width: 510px) {
+					@media (max-width: 991px) {
 						font-size: 35px;
 					}
 				}
 				img {
 					width: 350px;
-					@media (max-width: 510px) {
+					@media (max-width: 991px) {
 						width: 300px;
 					}
-					@media (max-width:$screen-xxs-min) {
+					@media (max-width: 640px) {
 						width: 280px;
 					}
 				}
@@ -1647,6 +1677,9 @@ body {
 				.wrap-news-card{
 					.news-card{
 						margin-bottom: 60px;
+						@media (max-width: 640px) {
+							margin-bottom: 20px;
+						}
 						p{
 							font-weight: 200;
 							padding: 20px 0;
@@ -1655,6 +1688,12 @@ body {
 							@media (max-width: 1280px) {
 								font-size: 17px;
 							}
+							@media (max-width: 991px) {
+								font-size: 15px;
+							}
+							@media (max-width: 640px) {
+								font-size: 13px;
+							}
 						}
 						.news-icon {
 							display: flex;
@@ -1662,7 +1701,7 @@ body {
 							color: #3b7eb1;
 							img {
 								margin-right: 5px;
-								@media (max-width: 320px) {
+								@media (max-width: 991px) {
 									width: 50px;
 								}
 							}
@@ -1672,8 +1711,14 @@ body {
 								@media (max-width: 1280px) {
 									font-size: 25px;
 								}
+								@media (max-width: 991px) {
+									font-size: 20px;
+								}
 							}
 						}
+					}
+					.bottle {
+						display: none;
 					}
 				}
 		}
@@ -1681,7 +1726,6 @@ body {
 	.wrap-carousel {
 		#carousel-after-news {
 			.slide-title {
-				top: 30px;
 				@media (max-width: $screen-xxs-min) {
 					top: 5px;
 					h3 {
@@ -2060,9 +2104,17 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			position: relative;
 			@media (max-width: 991px) {
 				width: 100%;
 				padding: 0;
+			}
+			.gradient {
+				position: absolute;
+				bottom: 0;
+				height: 200px;
+				width: 100%;
+				background: linear-gradient(to top,#ffffff,#ffffff00);
 			}
 			&__title {
 				text-align: center;
@@ -2072,6 +2124,10 @@ body {
 				}
 				@media (max-width: 991px) {
 					margin-top: 50px;
+				}
+				@media (max-width: $screen-xs-min) {
+					margin-top: 10px;
+					padding: 0 85px;
 				}
 				h2 {
 					font-size: 50px;
@@ -2090,8 +2146,12 @@ body {
 			}
 			&__email {
 				width: 100%;
+				z-index: 200;
 				@media (max-width: 991px) {
 					margin-bottom: 50px;
+				}
+				@media (max-width: $screen-xs-min) {
+					margin-bottom: 15px;
 				}
 				.wrap-email {
 					display: flex;
@@ -2106,7 +2166,7 @@ body {
 						max-width: 400px;
 					}
 					@media (max-width: $screen-xs-min) {
-						max-width: 300px;
+						max-width: 280px;
 					}
 					input {
 						outline: none;
