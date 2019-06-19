@@ -1,6 +1,6 @@
 // jquery code
 $(document).ready(function() {
-    toolbarTransform();
+    // toolbarTransform();
     $(".country").select2({
         templateResult: formatState,
         templateSelection: formatState
@@ -94,17 +94,17 @@ function formatState (opt) {
     }
 };
 
-function toolbarTransform(params) {
-    var toolbarBg = $('.wrap-toolbar');
-    var toolbarList = $('.toolbar');
-    var menu = $('.wrap-menu');
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= 150) {
-            toolbarBg.css('background-color', '#fff');
-            toolbarList.css('color', '#222');
-        } else {
-            toolbarBg.attr('style', '');
-            toolbarList.attr('style', '');
-        }
-    });
-}
+// function toolbarTransform(params) {
+//     var toolbarBg = $('.wrap-toolbar');
+//     var toolbarList = $('.toolbar');
+//     var menu = $('.wrap-menu');
+//     $(window).scroll(function() {
+//         if ($(window).scrollTop() >= 150) {
+//             toolbarBg.css('background-color', '#fff');
+//             toolbarList.css('color', '#222');
+//         } else {
+//             toolbarBg.attr('style', '');
+//             toolbarList.attr('style', '');
+//         }
+//     });
+// }
