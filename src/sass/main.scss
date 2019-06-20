@@ -1815,7 +1815,8 @@ body {
 		width: 100%;
 		border-top: 2px solid #338ac9;
 		background: #fff;
-		margin-top: 60px;
+		margin-top: 100px;
+		margin-bottom: 200px;
 		padding: 15px 0;
 		-webkit-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 		-moz-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
@@ -2063,7 +2064,6 @@ body {
 	}
 .wrap-footer {
 	color: $color-white;
-	margin-top: 200px;
 	width: 100%;
 	@media (max-width: $screen-xxs-min) {
 		margin-top: 80px;
@@ -2306,7 +2306,90 @@ body {
 }
 
 /*PRODUCT PAGE*/
+.wrap-filter-products {
+	width: 100%;
+	margin-top: 150px;
+	margin-bottom: 60px;
+	display: flex;
+	@media (max-width: 970px) {
+		flex-direction: column;
+	}
+	.select {
+		@media (max-width:  970px) {
+			display: flex;
+			align-items: center;
+			margin-top: 30px;
+		}
+		.search-result {
+			color: #7ea6de;
+			margin-top: 15px;
+			text-align: right;
+			@media (max-width: 970px) {
+				margin-top: 0px;
+				margin-left: 10px;
+			}
+			@media (max-width: $screen-xs-min) {
+				font-size: 15px;
+			}
+			@media (max-width: 357px) {
+				width: 150px;
+			}
+		}
+		.select2-selection.select2-selection--single {
+			outline: none;
+			height: 32px;
+			width: 265px;
+			border: 1px solid #7ea6de;
+			@media (max-width: 1155px) {
+				font-size: 12px;
+			}
+			@media (max-width: $screen-xs-min) {
+				width: 200px;
+			}
 
+			.select2-selection__arrow {
+				color: #7ea6de;
+				display: flex;
+				top: 2px;
+				align-items: center;
+				justify-content: center;
+
+				b {
+					display: none !important;
+				}
+			}
+
+			.select2-selection__rendered {
+				color: #7ea6de;
+				padding: 0 8px;
+			}
+		}
+	}
+	.search-filters {
+		width: 100%;
+		.search-span {
+			display: flex;
+			flex-wrap: wrap;
+			span {
+				margin: 5px;
+				position: relative;
+				color: #fff;
+				background: #2581c6;
+				padding: 3px 8px;
+				border-radius: 3px;
+				 i {
+					 cursor: pointer;
+					 padding-left: 10px;
+				 }
+			}
+			.delete-all {
+				background: #fff;
+              	color: #2581c6;
+				border: 1px solid #2581c6;
+			}
+		}
+	}
+}
 .wrap-pagination {
 	display: flex;
 	justify-content: center;
@@ -2319,5 +2402,142 @@ body {
 		line-height: 1.25;
 		color: #ffffff;
 		background-color: #3b7eb1;
+	}
+	.page-item {
+		li {
+			a {
+				outline: none;
+			}
+		}
+	}
+	.page-item.active .page-link {
+		z-index: 1;
+		color: #000;
+		background-color: #f8f9fa;
+		border-color: #f8f9fa;
+	}
+}
+.wrap-service {
+	width: 700px;
+	height: 400px;
+	position: relative;
+	margin: 100px auto;
+	background: url(../assets/Main.png) no-repeat;
+	background-size: cover;
+	color: $color-white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 100px;
+	@media (max-width: $screen-sm-min) {
+		width: 100%;
+		padding: 20px 70px;
+	}
+	.gradient {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		right: 0;
+		height: 130px;
+		background: linear-gradient(to bottom,#3b7eb1,#ffffff00);
+	}
+	&__title {
+        z-index: 2;
+		width: 100%;
+		display: -webkit-box;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		h2 {
+			font-weight: 300;
+		}
+		p {
+			font-weight: 300;
+		}
+	}
+	button {
+		width: 100%;
+		max-width: 300px;
+		outline: 0;
+		color: #fff;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: flex;
+		align-items: center;
+		border: none;
+		height: 35px;
+		justify-content: space-between;
+		border-radius: 3px;
+		background: #f28c17;
+	}
+}
+
+.main-slider {
+	width: 100%;
+	max-height: 998px;
+	height: 100vh;
+	background: url('../assets/Main.png') no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+
+/*MARKUP BLOCK*/
+.wrap-about {
+	&__title {
+		h2 {
+			font-weight: 300;
+			color: #7f7f7f;
+		}
+		p {
+			color: #3b7eb1;
+			text-transform: uppercase;
+		}
+	}
+	&__about {
+		p {
+			color: #7f7f7f;
+		}
+	}
+}
+
+.request-disclosure {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 445px;
+	color: #3b7eb1;
+	.icons {
+		font-size: 20px;
+		a {
+			cursor: pointer;
+			margin: 0 5px;
+		}
+	}
+	button {
+		border: 1px solid #3b7eb1;
+		outline: none;
+		border-radius: 4px;
+		color: #3b7eb1;
+		padding: 3px 25px;
+		text-transform: uppercase;
+	}
+}
+
+.wrap-equipment {
+	width: 100%;
+	max-width: 445px;
+	border-top: 2px solid #338ac9;
+	background: #fff;
+	padding: 25px;
+	box-shadow: 7px 7px 7px -4px rgba(0,0,0,.43);
+	&__title {
+		h2 {
+
+		}
+		p {
+			
+		}
 	}
 }
