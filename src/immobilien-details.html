@@ -149,6 +149,11 @@
         </div>
     </div>
     <div class="main-slider position-relative">
+        <div class="wrap-container">
+            <div class="container-fluid">
+                    <button id="open-modal" class="scale" onClick="triggerResizeSlider()"><i class="fa fa-expand" aria-hidden="true"></i></button>
+            </div>
+        </div>
         <div class="wrap-form">
             <div class="d-flex">
                 <div id="demo" class="width collapse" aria-expanded="true" role="form">
@@ -300,25 +305,23 @@
             </div>
         </div>
             <div id="sync1" class="owl-carousel owl-theme-single-page">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
-                <img class='item img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
             </div>
         <div class="wrap-container">
             <div class="container-fluid">
                 <div class="wrap-sync2">
-                    <button class="scale"><i class="fa fa-expand" aria-hidden="true"></i></button>
                     <div id="sync2" class="owl-carousel owl-theme-single-page d-md-block d-none">
                         <div class="item">
                             <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
@@ -832,74 +835,77 @@
             </div>
         </div>
     </div>
-    <div class="slider-modal">
-        <div id="sync3" class="owl-carousel owl-theme-single-page">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-            <img class='img-fluid' src="./assets/banner1.jpg" alt="">
-        </div>
+    <div class="wrap-slider-modal">
+        <div class="slider-modal">
+            <button id="close-modal" class="scale-modal"><i class="fa fa-compress" aria-hidden="true"></i></button>
+            <div id="sync3" class="owl-carousel owl-theme-single-page">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+                <img class='img-fluid' src="./assets/banner1.jpg" alt="">
+            </div>
 
-        <div id="sync4" class="owl-carousel owl-theme-single-page d-md-block d-none">
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+            <div id="sync4" class="owl-carousel owl-theme-single-page d-md-block d-none">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                <div class="item">
+                    <div style="background-image: url('./assets/banner1.jpg'); background-size: cover; background-position: center bottom; width: 100%" class="slider-image">
+                    </div>
                 </div>
             </div>
         </div>

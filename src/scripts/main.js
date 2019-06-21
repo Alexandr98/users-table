@@ -1,8 +1,10 @@
 // jquery code
+var currentSlideModal = 0
+
 $(document).ready(function() {
     // toolbarTransform();
     initThumbnailSlider();
-    // initModalThumbnailSlider();
+    initModalThumbnailSlider();
     $(".country").select2({
         templateResult: formatState,
         templateSelection: formatState
@@ -19,7 +21,13 @@ $(document).ready(function() {
     });
     $('#icon').append('<i class="fa fa-toggle fa-chevron-circle-down" aria-hidden="true"></i>').click(function(){
         $('.fa-toggle').toggleClass('fa-chevron-circle-down fa-chevron-circle-up')
-    });;
+    });
+    $('#open-modal').click(function(){
+        $('.wrap-slider-modal').addClass('open');
+    });
+    $('#close-modal').click(function(){
+        $('.wrap-slider-modal').removeClass('open');
+    });
     $('.carousel-main').owlCarousel({
         items: 1,
         loop: true,
@@ -120,6 +128,7 @@ function initModalThumbnailSlider() {
 
     sync3
         .owlCarousel({
+            startPosition: currentSlideModal,
             items: 1,
             slideSpeed: 2000,
             nav: true,
@@ -127,10 +136,7 @@ function initModalThumbnailSlider() {
             dots: false,
             loop: true,
             responsiveRefreshRate: 200,
-            navText: [
-                '<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
-                '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>',
-            ],
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
             responsive: {
                 767: {
                     nav: false
@@ -143,10 +149,11 @@ function initModalThumbnailSlider() {
         .on('initialized.owl.carousel', function() {
             sync4
                 .find('.owl-item')
-                .eq(0)
+                .eq(currentSlideModal)
                 .addClass('current');
         })
         .owlCarousel({
+            startPosition: currentSlideModal,
             items: slidesPerPage,
             dots: false,
             nav: true,
@@ -225,6 +232,7 @@ function initModalThumbnailSlider() {
     }
     resizeThumbnails()
 }
+
 function initThumbnailSlider(){
     var sync1 = $('#sync1');
 
@@ -307,7 +315,7 @@ function initThumbnailSlider(){
             .find('.owl-item.active')
             .last()
             .index();
-
+        currentSlideModal = current
         if (current > end) {
             sync2.data('owl.carousel').to(current, 100, true);
         }
@@ -350,6 +358,18 @@ function  setItemHeight(sliderItem) {
     var itemWidth = sliderItem.width();
     var itemHeight = itemWidth
     sliderItem.css({height: itemHeight+'px'})
+}
+
+function triggerResizeSlider() {
+    var sync3 =  $('#sync3')
+    var sync4 =  $('#sync4')
+    setTimeout(function () {
+        sync3.trigger('refresh.owl.carousel');
+        sync4.trigger('refresh.owl.carousel');
+        $(window).trigger('resize');
+    },0)
+
+
 }
 
 // function toolbarTransform(params) {

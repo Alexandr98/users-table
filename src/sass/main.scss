@@ -2484,6 +2484,22 @@ body {
 	width: 100%;
 	height: auto;
 	position: relative;
+	.scale {
+		outline: 0;
+		color: #fff;
+		z-index: 40;
+		width: 100%;
+		position: absolute;
+		bottom: 150px;
+		max-width: 30px;
+		background: 0 0;
+		height: 30px;
+		border-radius: 3px;
+		border: 2px solid #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.wrap-form {
 		width: 100%;
 		position: absolute;
@@ -3215,17 +3231,6 @@ body {
 	-webkit-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 	-moz-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 	box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
-	.scale {
-		outline: none;
-		position: absolute;
-		top: -35px;
-		color: $color-white;
-		width: 100%;
-		max-width: 30px;
-		background: transparent;
-		border-radius: 3px;
-		border:2px solid #fff;
-	}
 	#sync2 {
 		position: relative;
 		.owl-stage {
@@ -3312,9 +3317,9 @@ body {
 	//arrows on first carousel
 	#sync1.owl-theme-single-page {
 		position: relative;
-
 		.owl-prev,
 		.owl-next {
+			display: none;
 			height: 16px;
 			width: 11px;
 
@@ -3329,7 +3334,7 @@ body {
 
 	.owl-theme-single-page {
 		@media (max-width: $screen-xs-max) {
-			#sync12 {
+			#sync1 {
 				.owl-nav {
 					display: flex !important;
 					padding: 7px 17px 0 !important;
@@ -3341,3 +3346,186 @@ body {
 			}
 		}
 	}
+.wrap-slider-modal.open{
+	width: 100%;
+	padding: 50px;
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	height: 100vh;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 1090;
+	.slider-modal {
+		width: 100%;
+		max-width: 1345px;
+		margin: 0 auto;
+		border: 15px solid $color-white;
+		position: relative;
+		#sync3 {
+			.item {
+				color: #fff;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				text-align: center;
+			}
+		}
+		.scale-modal {
+			outline: 0;
+			position: absolute;
+			bottom: 180px;
+			left: -60px;
+			color: #fff;
+			z-index: 40;
+			width: 100%;
+			max-width: 30px;
+			height: 30px;
+			background: transparent;
+			border-radius: 3px;
+			border: 2px solid #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#sync4 {
+			position: relative;
+			background: $color-white;
+			.owl-stage {
+				display: flex;
+				justify-content: space-between;
+				flex: 1;
+				flex-wrap: nowrap;
+
+				&:after {
+					content: '';
+				}
+			}
+
+			.owl-item {
+				margin: 20px 0px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			.item {
+				opacity: 0.4;
+				color: #fff;
+				text-align: center;
+				cursor: pointer;
+				display: flex;
+				align-items: stretch;
+				justify-content: stretch;
+				padding: 5px;
+
+				h1 {
+					font-size: 18px;
+				}
+			}
+
+			.current .item {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.owl-theme {
+	.owl-dots {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		button.owl-dot {
+			background-color: inherit;
+			color: inherit;
+			border: none;
+			padding: 0 !important;
+			font: inherit;
+			width: 13px;
+			height: 13px;
+			border: 2px solid rgba(255, 255, 255, 0.5);
+			margin: 0 5px;
+			border-radius: 50%;
+			transition: background-color 0.5s ease, border-color 0.5s ease;
+			&.active {
+				background-color: #fff;
+				border-color: #fff;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.owl-theme-single-page {
+	.owl-nav {
+		/*default owl-theme-single-page theme reset .disabled:hover links */
+		[class*='owl-'] {
+			transition: all 0.3s ease;
+			&.disabled:hover {
+				background-color: #d6d6d6;
+			}
+		}
+		font-size: 75px;
+		color: #f38e1b;
+	}
+	.owl-next {
+		background: rgba(255,255,255,.7) !important;
+		width: 40px;
+		outline:none;
+		position: absolute;
+		top: 0;
+		bottom: 10px;
+		right: 0!important;
+	}
+
+	.owl-prev {
+		background: rgba(255,255,255,.7) !important;
+		width: 40px;
+		outline:none;
+		position: absolute;
+		top: 0;
+		bottom: 10px;
+		left: 0!important;
+	}
+}
+
+//arrows on first carousel
+#sync3.owl-theme-single-page {
+	position: relative;
+	.owl-nav {
+		/*default owl-theme-single-page theme reset .disabled:hover links */
+		[class*='owl-'] {
+			transition: all 0.3s ease;
+			&.disabled:hover {
+				background-color: #d6d6d6;
+			}
+		}
+		font-size: 75px;
+		color: #fff;
+	}
+	.owl-next {
+		background: 0 0!important;
+		position: absolute;
+		right: -80px !important
+	}
+
+	.owl-prev {
+		background: 0 0 !important;
+		position: absolute;
+		left: -80px !important
+	}
+}
+
+.owl-theme-single-page {
+		#sync4 {
+			display: none !important;
+		}
+		.owl-nav {
+			display: flex !important;
+		}
+}
+
