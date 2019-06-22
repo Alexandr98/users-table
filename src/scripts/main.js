@@ -28,9 +28,6 @@ $(document).ready(function() {
     $('#close-modal').click(function(){
         $('.wrap-slider-modal').removeClass('open');
     });
-    $('#close-slider').click(function(){
-        $('.wrap-slider-modal').removeClass('open');
-    });
     $('.carousel-main').owlCarousel({
         items: 1,
         loop: true,
@@ -371,8 +368,6 @@ function triggerResizeSlider() {
         sync4.trigger('refresh.owl.carousel');
         $(window).trigger('resize');
     },0)
-
-
 }
 
 // function toolbarTransform(params) {
