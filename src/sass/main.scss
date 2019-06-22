@@ -321,11 +321,17 @@ body {
 	}
 }
 
-.navbar-light .navbar-toggler {
+.navbar-light .navbar-toggler.burger{
 	border: none;
 	@media (max-width: $screen-xxs-max) {
 		margin-bottom: 10px;
 		padding: 5px;
+	}
+}
+.navbar-light .navbar-toggler.right{
+	border: none;
+	@media (max-width: $screen-xxs-max) {
+		padding: 10px;
 	}
 }
 .navbar {
@@ -354,6 +360,10 @@ body {
 			padding: 0 10px;
 		}
 		li {
+			border-bottom: 1px solid #cfd7e0;
+		}
+		li:first-child {
+			border-top: 1px solid #cfd7e0;
 			border-bottom: 1px solid #cfd7e0;
 		}
 	}
@@ -416,15 +426,38 @@ body {
 		-webkit-box-shadow: 0 7px 10px -7px rgba(0,0,0,0.3);
 		-moz-box-shadow: 0 7px 10px -7px rgba(0,0,0,0.3);
 		box-shadow: 0 7px 10px -7px rgba(0,0,0,.3);
-		.wrap-btn {
-			width: 100%;
+		.ContainerCenter{
 			display: flex;
-			align-items: center;
+			flex-direction: row;
 			justify-content: center;
-			img {
-				width: 20px;
-				margin: 0 5px;
-			}
+			text-align: center;
+			label {
+				margin: 2px 0;
+			};
+		}
+
+		.radio-button {
+
+			display: flex;
+			flex-direction: column;
+			border: 0px solid gray;
+			border-radius: 3px;
+			cursor: pointer;
+			padding: 3px;
+		}
+
+		input {
+			visibility: hidden;
+			position: absolute;
+		}
+
+		input:checked+.radio-button {
+			background-color: #4c84d2;
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
 		}
 	}
 }
@@ -441,6 +474,18 @@ body {
 	}
 	@media (max-width: 425px) {
 		max-height: 400px;
+	}
+	.gradient {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		right: 0;
+		z-index: 200;
+		height: 130px;
+		background: linear-gradient(to bottom,#3b7eb1,#ffffff00);
+		@media (max-width: 991px) {
+			display: none;
+		}
 	}
 
 		.wrap-form {
@@ -2321,6 +2366,10 @@ body {
 	@media (max-width: 970px) {
 		flex-direction: column;
 	}
+	@media (max-width: $screen-xs-min) {
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
 	.select {
 		@media (max-width:  970px) {
 			display: flex;
@@ -2440,6 +2489,9 @@ body {
 		width: 100%;
 		padding: 20px 70px;
 	}
+	@media (max-width: $screen-xs-min) {
+		margin: 40px auto;
+	}
 	.gradient {
 		position: absolute;
 		top: 0;
@@ -2449,13 +2501,14 @@ body {
 		background: linear-gradient(to bottom,#3b7eb1,#ffffff00);
 	}
 	&__title {
-        z-index: 2;
+		z-index: 2;
 		width: 100%;
-		display: -webkit-box;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
+		font-size: 20px;
+		font-weight: 300;
 		h2 {
 			font-weight: 300;
 		}
@@ -2465,18 +2518,18 @@ body {
 	}
 	button {
 		width: 100%;
-		max-width: 300px;
+		max-width: 450px;
 		outline: 0;
 		color: #fff;
 		margin: 0 auto;
 		display: -webkit-box;
 		display: flex;
 		align-items: center;
-		border: none;
 		height: 35px;
 		justify-content: space-between;
 		border-radius: 3px;
 		background: #f28c17;
+		border: 1px solid $color-white;
 	}
 }
 
