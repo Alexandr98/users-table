@@ -1,5 +1,5 @@
 // jquery code
-var currentSlideModal = 0
+var currentSlideModal = 0;
 
 $(document).ready(function() {
     // toolbarTransform();
@@ -28,6 +28,12 @@ $(document).ready(function() {
     $('#close-modal').click(function(){
         $('.wrap-slider-modal').removeClass('open');
     });
+    $('.wrap-slider-modal').bind('click', function () {
+        $('.wrap-slider-modal').removeClass('open');
+    })
+    $('.slider-modal').bind('click', function (e) {
+        e.stopPropagation();
+    })
     $('.carousel-main').owlCarousel({
         items: 1,
         loop: true,
@@ -109,7 +115,7 @@ function initMap() {
     var portDAndratx = {lat: 39.544, lng: 2.389};
     // The map, centered at Uluru
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 14.5, center: portDAndratx});
+        document.getElementById('map'), {zoom: 14.5, center: portDAndratx, disableDefaultUI: true,});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: portDAndratx, map: map});
 }
@@ -254,10 +260,7 @@ function initThumbnailSlider(){
             dots: false,
             loop: true,
             responsiveRefreshRate: 200,
-            navText: [
-                '<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
-                '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>',
-            ],
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
             responsive: {
                 767: {
                     nav: false
