@@ -27,6 +27,7 @@ $(document).ready(function() {
     });
     $('#close-modal').click(function(){
         $('.wrap-slider-modal').removeClass('open');
+
     });
     $('.wrap-slider-modal').bind('click', function () {
         $('.wrap-slider-modal').removeClass('open');
@@ -134,7 +135,6 @@ function initModalThumbnailSlider() {
 
     sync3
         .owlCarousel({
-            startPosition: currentSlideModal,
             items: 1,
             slideSpeed: 2000,
             nav: true,
@@ -149,7 +149,7 @@ function initModalThumbnailSlider() {
                 }
             }
         })
-        .on('changed.owl.carousel', syncPosition);
+        .on('changed.owl.carousel', syncPosition3);
 
     sync4
         .on('initialized.owl.carousel', function() {
@@ -159,7 +159,6 @@ function initModalThumbnailSlider() {
                 .addClass('current');
         })
         .owlCarousel({
-            startPosition: currentSlideModal,
             items: slidesPerPage,
             dots: false,
             nav: true,
@@ -170,7 +169,7 @@ function initModalThumbnailSlider() {
         })
         .on('changed.owl.carousel', syncPosition4);
 
-    function syncPosition(el) {
+    function syncPosition3(el) {
         //if you set loop to false, you have to restore this next line
         //var current = el.item.index;
 
@@ -228,7 +227,7 @@ function initModalThumbnailSlider() {
         $(window).resize(function() {
             if ($(window).width() > 991) {
                 setItemHeight(sliderItem);
-            } else {
+            }  else {
                 sliderItem.css({
                     height: 'auto',
                 });
@@ -267,7 +266,7 @@ function initThumbnailSlider(){
                 }
             }
         })
-        .on('changed.owl.carousel', syncPosition);
+        .on('changed.owl.carousel', syncPosition1);
 
     sync2
         .on('initialized.owl.carousel', function() {
@@ -287,7 +286,7 @@ function initThumbnailSlider(){
         })
         .on('changed.owl.carousel', syncPosition2);
 
-    function syncPosition(el) {
+    function syncPosition1(el) {
         //if you set loop to false, you have to restore this next line
         //var current = el.item.index;
 
@@ -325,6 +324,8 @@ function initThumbnailSlider(){
         if (current < start) {
             sync2.data('owl.carousel').to(current - onscreen, 100, true);
         }
+        $('#sync3').trigger('to.owl.carousel',currentSlideModal )
+        $('#sync4').trigger('to.owl.carousel',currentSlideModal )
     }
 
     function syncPosition2(el) {
@@ -356,7 +357,6 @@ function initThumbnailSlider(){
     resizeThumbnails()
 }
 
-
 function  setItemHeight(sliderItem) {
     var itemWidth = sliderItem.width();
     var itemHeight = itemWidth
@@ -366,11 +366,21 @@ function  setItemHeight(sliderItem) {
 function triggerResizeSlider() {
     var sync3 =  $('#sync3')
     var sync4 =  $('#sync4')
+    sync3.trigger('to.owl.carousel',currentSlideModal )
+    sync4.trigger('to.owl.carousel',currentSlideModal )
     setTimeout(function () {
         sync3.trigger('refresh.owl.carousel');
         sync4.trigger('refresh.owl.carousel');
         $(window).trigger('resize');
     },0)
+    $(window).resize(function () {
+        if(window.innerHeight < window.innerWidth && $(window).width() < 768){
+           var sync3child= sync3.find('img.item')
+            sync3child.css({height: window.innerHeight})
+        }
+    })
+    $(window).trigger('resize');
+
 }
 
 // function toolbarTransform(params) {

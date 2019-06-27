@@ -1714,12 +1714,16 @@ body {
 				margin-bottom: 50px;
 				@media(max-width: $screen-xs-min){
 					text-align: center;
+					margin-bottom: 20px;
 				}
 			}
 			.wrap-cards{
 				margin-bottom: 190px;
 				@media(max-width: 991px){
 					margin-bottom: 30px;
+				}
+				@media(max-width: $screen-xs-min){
+					margin-bottom: 0px;
 				}
 			}
 			.card {
@@ -1906,9 +1910,16 @@ body {
 				color: #757575;
 				text-align: center;
 				font-weight: $font-weight-thin;
+				a{
+					text-decoration: none;
+					cursor: pointer;
+				}
 				i {
 					padding-right: 5px;
 				}
+			}
+			@media(max-width: $screen-xs-min) {
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -2264,12 +2275,15 @@ body {
 		box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
 		@media(max-width: $screen-xs-min){
 			margin-top: 50px;
-			margin-bottom: 70px;
+			margin-bottom: 40px;
 		}
 		p {
 			color: #837c7e;
 			font-style: italic;
 			padding: 0 15px;
+			@media(max-width: $screen-xs-min){
+				font-size: 25px;
+			}
 		}
 		form {
 			display: flex;
@@ -3398,9 +3412,13 @@ body {
 .wrap-main-content {
 	margin-top: 20px;
   .property{
-    color: #757575;
-    text-align: right;
-    font-weight: $font-weight-thin;
+	  color: #757575;
+	  text-align: right;
+	  font-weight: $font-weight-thin;
+	  a{
+		  text-decoration: none;
+		  cursor: pointer;
+	  }
 	  @media(max-width: 991px){
 		  display: none;
 	  }
@@ -4116,19 +4134,16 @@ body {
 			display: none;
 			@media(max-width: 991px){
 				display: block;
+				font-size: 40px !important;
+				width: 30px;
+				position: absolute;
+				top:0;
+				bottom: 0;
 			}
-		}
-		button.owl-prev{
-			width: 30px;
-			position: absolute;
-			top:0;
-			bottom: 0;
-		}
-		button.owl-next{
-			width: 30px;
-			position: absolute;
-			top:0;
-			bottom: 0;
+			@media(max-width: $screen-xs-min){
+				width: 20px;
+				font-size: 30px !important;
+			}
 		}
 	}
 
@@ -4150,7 +4165,7 @@ body {
 .wrap-slider-modal{
 	visibility: hidden;
 	width: 100%;
-	padding: 50px;
+	padding: 20px 50px;
 	background: rgba(0,0,0,0.7);
 	position: fixed;
 	height: 100vh;
@@ -4160,6 +4175,9 @@ body {
 	z-index: 1090;
 	@media (max-width: 991px){
 		padding: 0;
+	}
+	@media (max-width: 870px) and (orientation: landscape){
+		padding: 0 40px;
 	}
 	&.open{
 		visibility: visible;
@@ -4182,6 +4200,9 @@ body {
 			position: static;
 			margin: 130px auto;
 		}
+		@media (max-width: 870px) and (orientation: landscape){
+			margin: 0;
+		}
 		.modal-text{
 			display: none;
 			@media (max-width: 991px){
@@ -4190,6 +4211,9 @@ body {
 				text-align: center;
 				text-transform: uppercase;
 				font-weight: $font-weight-bold;
+			}
+			@media (max-width: 870px) and (orientation: landscape){
+				display: none;
 			}
 		}
 		#sync3 {
@@ -4221,6 +4245,12 @@ body {
 				top: 20px;
 				left: 50%;
 				transform: translateX(-50%);
+			}
+			@media(max-width: 870px) and (orientation:landscape){
+				right: 5px !important;
+				top: 5px !important;
+				left: auto !important;
+				transform: translateX(0) !important;
 			}
 		}
 
