@@ -47,6 +47,7 @@
                                     <select class="country" data-width="fit">
                                         <option value="flag1" data-image="/assets/Germany.png" label="Germany"></option>
                                         <option value="flag2" data-image="/assets/USA.png" label="Germany"></option>
+                                        <option value="flag3" data-image="/assets/Spain.png" label="Spain"></option>
                                     </select>
                                 </div>
                             </div>
@@ -71,22 +72,22 @@
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Immobilen</a>
                                 <div class="dropdown-menu" >
                                     <a class="dropdown-item" href="/immobilien.html">Neu im Angebot</a>
-                                    <a class="dropdown-item" href="#">Mallorca</a>
+                                    <a class="dropdown-item" href="/immobilien-details.html">Mallorca</a>
                                     <a class="dropdown-item" href="#">Ibiza & Formentera</a>
                                     <a class="dropdown-item" href="#">Menorca</a>
                                     <a class="dropdown-item" href="#">Belliebte Residenzen</a>
-                                    <a class="dropdown-item" href="#">Merkliste</a>
+                                    <a class="dropdown-item" href="#">Merkliste<i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verkaufen</a>
                                 <div class="dropdown-menu" >
-                                    <a class="dropdown-item nav-link" href="#">Neu im Angebot</a>
+                                    <a class="dropdown-item" href="#">Neu im Angebot</a>
                                     <a class="dropdown-item" href="#">Mallorca</a>
                                     <a class="dropdown-item" href="#">Ibiza & Formentera</a>
                                     <a class="dropdown-item" href="#">Menorca</a>
                                     <a class="dropdown-item" href="#">Belliebte Residenzen</a>
-                                    <a class="dropdown-item" href="#">Merkliste</a>
+                                    <a class="dropdown-item" href="#">Merkliste <i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -97,7 +98,7 @@
                                     <a class="dropdown-item" href="#">Ibiza & Formentera</a>
                                     <a class="dropdown-item" href="#">Menorca</a>
                                     <a class="dropdown-item" href="#">Belliebte Residenzen</a>
-                                    <a class="dropdown-item" href="#">Merkliste</a>
+                                    <a class="dropdown-item" href="#">Merkliste <i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -108,7 +109,7 @@
                                     <a class="dropdown-item" href="#">Ibiza & Formentera</a>
                                     <a class="dropdown-item" href="#">Menorca</a>
                                     <a class="dropdown-item" href="#">Belliebte Residenzen</a>
-                                    <a class="dropdown-item" href="#">Merkliste</a>
+                                    <a class="dropdown-item" href="#">Merkliste <i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -119,7 +120,7 @@
                                     <a class="dropdown-item" href="#">Ibiza & Formentera</a>
                                     <a class="dropdown-item" href="#">Menorca</a>
                                     <a class="dropdown-item" href="#">Belliebte Residenzen</a>
-                                    <a class="dropdown-item" href="#">Merkliste</a>
+                                    <a class="dropdown-item" href="#">Merkliste <i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -142,14 +143,21 @@
                                 <label>
                                     <input type="radio" name="gender"  value="hombre"/>
                                     <div class="radio-button">
-                                        <img src="/assets/Germany.png" alt="Germany">
+                                        <img class="germany" src="/assets/Germany.png" alt="Germany">
                                     </div>
                                 </label>
 
                                 <label>
                                     <input type="radio" name="gender" value="mujer"/>
                                     <div class="radio-button">
-                                        <img src="/assets/USA.png" alt="USA">
+                                        <img class="britain" src="/assets/USA.png" alt="USA">
+                                    </div>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="gender" value="mujer"/>
+                                    <div class="radio-button">
+                                        <img  class="spain" src="/assets/Spain.png" alt="Spain">
                                     </div>
                                 </label>
 
@@ -456,7 +464,7 @@
                 </div>
                 <p class="property"><a><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Zur Immobilienauswahl</a></p>
                 <div class="row">
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-8 first">
                         <div class="wrap-about">
                             <div class="wrap-about__title">
                                 <h2>Highlights</h2>
@@ -529,7 +537,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 second">
                         <div class="request-disclosure">
                             <button>EXPOSÉ Anfordern </button>
                             <div class="icons">

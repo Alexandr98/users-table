@@ -9,6 +9,7 @@ $(document).ready(function() {
         templateResult: formatState,
         templateSelection: formatState
     });
+    $(".custom-select").select2();
     $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
     $('#open-menu').click(function(){
         $('.navbar-collapse').addClass('show');
