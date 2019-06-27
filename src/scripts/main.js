@@ -2,7 +2,7 @@
 var currentSlideModal = 0;
 
 $(document).ready(function() {
-    // toolbarTransform();
+    toolbarTransform();
     initThumbnailSlider();
     initModalThumbnailSlider();
     $(".country").select2({
@@ -120,6 +120,14 @@ function initMap() {
         document.getElementById('map'), {zoom: 14.5, center: portDAndratx, disableDefaultUI: true,});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: portDAndratx, map: map});
+    $(window).resize(function () {
+        if(window.innerWidth < 992){
+            $('#map').css({'min-width': window.innerWidth})
+        }else{
+            $('#map').css({'min-width': '0'})
+        }
+    });
+    $(window).trigger('resize');
 }
 
 function initModalThumbnailSlider() {
@@ -384,17 +392,19 @@ function triggerResizeSlider() {
 
 }
 
-// function toolbarTransform(params) {
-//     var toolbarBg = $('.wrap-toolbar');
-//     var toolbarList = $('.toolbar');
-//     var menu = $('.wrap-menu');
-//     $(window).scroll(function() {
-//         if ($(window).scrollTop() >= 150) {
-//             toolbarBg.css('background-color', '#fff');
-//             toolbarList.css('color', '#222');
-//         } else {
-//             toolbarBg.attr('style', '');
-//             toolbarList.attr('style', '');
-//         }
-//     });
-// }
+function toolbarTransform(params) {
+    var toolbarBg = $('.wrap-toolbar');
+    var toolbarList = $('.toolbar');
+    var menu = $('.wrap-menu');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= 150) {
+            toolbarBg.css('background-color', '#fff');
+            toolbarList.find('*').css('color', '#222');
+        } else {
+            toolbarBg.attr('style', '');
+            toolbarList.attr('style', '');
+            toolbarList.find('*').attr('style', '');
+
+        }
+    });
+}
