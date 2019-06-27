@@ -306,6 +306,7 @@ body {
 
 .navbar-brand {
 	img {
+		cursor: pointer;
 		width: 380px;
 	}
 	@media (max-width: $screen-sm-max) {
