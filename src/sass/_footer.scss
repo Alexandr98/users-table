@@ -1,25 +1,36 @@
-.wrap-footer {
-  color: $color-white;
-  width: 100%;
-  @media (max-width: $screen-xxs-min) {
-    margin-top: 80px;
-  }
-  .wrap-sections {
+.wrap-bg {
+  position: relative;
+  .wrap-section {
     display: flex;
     width: 100%;
-    @media (max-width: 991px) {
-      flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    @media (max-width: 1440px) {
+      transform: translate(-50%, -50%);
+      top:50%;
     }
-    .first-section {
-      padding: 40px;
-      width: 50%;
+    @media (max-width: 991px) {
+      top:45%;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 360px) {
+      top:47%;
+    }
+
+    .first-section-content {
       position: relative;
-      background: #338ac9;
+      width: 50%;
+      margin-top: 60px;
       @media (max-width: 991px) {
+        margin-top:35px;
         width: 100%;
       }
-      @media (max-width: 425px) {
-        padding: 10px;
+      @media (max-width: $screen-xxs-min) {
+        margin-top: 0;
       }
       p {
         font-weight: 300;
@@ -33,15 +44,12 @@
           padding-top: 30px;
         }
       }
-      &__title{
-        margin-top: 20px;
+
+      &__title {
         @media (max-width: 1150px) {
           img {
             width: 300px;
           }
-        }
-        @media (max-width: $screen-xxs-min) {
-          margin-top: 0px;
         }
       }
       &__contacts {
@@ -49,12 +57,13 @@
         .wrap-contacts {
           font-size: 25px;
           font-weight: 200;
-          @media (max-width: 1150px) {
+          @media (max-width: 1160px) {
             font-size: 15px;
           }
           @media (max-width: $screen-xxs-min) {
             font-size: 12px;
           }
+
           i {
             padding-right: 10px;
           }
@@ -66,8 +75,10 @@
         @media (max-width: $screen-xxs-min) {
           font-size: 23px;
         }
-        a{
+
+        a {
           cursor: pointer;
+
           &:not(:last-child) {
             &::after {
               content: '|';
@@ -81,56 +92,53 @@
         top: 70px;
         right: 35px;
         @media (max-width: 1300px) {
-          top: 120px;
+          top: 100px;
+        }
+        @media (max-width: 1160px) {
+          top: 70px;
         }
         @media (max-width: 1150px) {
-          top: 100px;
+          top: 30px;
         }
-        @media (max-width: 425px) {
-          top: 100px;
-          right: 10px;
+        @media (max-width: $screen-xs-min) {
+          top: 60px;
+          img {
+            width: 160px;
+          }
+        }
+        @media (max-width: 470px) {
+          top: 70px;
           img {
             width: 120px;
           }
         }
+        @media (max-width: 375px) {
+          right: 15px;
+        }
       }
     }
-    .second-section{
-      width: 50%;
-      background: url('../assets/mac-footer.png') no-repeat center;
-      background-size: cover;
-      -webkit-box-shadow: inset 0px 200px 41px -56px rgba(0,0,0,0.62);
-      -moz-box-shadow: inset 0px 200px 41px -56px rgba(0,0,0,0.62);
-      box-shadow: inset 0px 200px 41px -56px rgba(0,0,0,0.62);
-      padding: 80px 0;
+    .second-section-content {
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      @media (max-width: 991px) {
-        width: 100%;
-        padding: 0;
+      margin-top: 100px;
+      @media (max-width: 1440px) {
+        margin: 100px auto 0;
       }
-      .gradient {
-        position: absolute;
-        bottom: 0;
-        height: 200px;
+      @media (max-width: 991px) {
+        margin-top: 60px;
         width: 100%;
-        background: linear-gradient(to top,#ffffff,#ffffff00);
       }
       &__title {
         text-align: center;
-        padding: 0 230px;
         @media (max-width: 1440px) {
           padding: 0;
         }
-        @media (max-width: 991px) {
-          margin-top: 50px;
-        }
         @media (max-width: $screen-xs-min) {
           margin-top: 10px;
-          padding: 0 85px;
         }
+
         h2 {
           font-size: 50px;
           font-weight: 200;
@@ -138,27 +146,27 @@
             font-size: 40px;
           }
         }
+
         p {
           font-weight: $font-weight-regular;
-          font-size: 20px;
+          font-size: 25px;
           @media (max-width: 991px) {
-            font-size: 15px;
+            font-size: 18px;
           }
         }
       }
+
       &__email {
         width: 100%;
         z-index: 200;
-        @media (max-width: 991px) {
-          margin-bottom: 50px;
-        }
         @media (max-width: $screen-xs-min) {
           margin-bottom: 15px;
         }
+
         .wrap-email {
           display: flex;
           width: 100%;
-          max-width: 550px;
+          max-width: 450px;
           height: 40px;
           margin: 0 auto;
           @media (max-width: 991px) {
@@ -168,19 +176,22 @@
             max-width: 400px;
           }
           @media (max-width: $screen-xs-min) {
-            max-width: 280px;
+            max-width: 260px;
           }
+
           input {
             outline: none;
             width: 100%;
             padding: 0 5px;
-            border: 1px solid  #f28c17;
+            border: 1px solid #f28c17;
             color: #f28c17;
           }
-          ::placeholder{
+
+          ::placeholder {
             text-overflow: ellipsis;
             color: #f28c17
           }
+
           button {
             width: 100%;
             max-width: 130px;
@@ -198,6 +209,7 @@
               justify-content: space-between;
               max-width: 100%;
             }
+
             i {
               padding-left: 10px;
             }
@@ -206,43 +218,91 @@
       }
     }
   }
-  .footer {
-    padding: 15px 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #000;
-    border-top:5px solid #f28c17;
+
+  .first-section {
+    height: 465px;
+    position: relative;
+    background: #338ac9;
     @media (max-width: 991px) {
-      flex-direction: column;
-      padding: 20px;
+      width: 100%;
+      padding: 0 15px;
+      height: 375px;
     }
-    &__links {
-      cursor: pointer;
-      text-transform: uppercase;
-      a {
-        margin: 0 5px;
-        @media (max-width: $screen-xs-min) {
-          font-size: 15px;
-        }
-      }
+    @media (max-width: 425px) {
+      padding: 10px;
     }
-    &__sponsor {
+  }
+  .second-section {
+    height: 465px;
+    background: url('../assets/mac-footer.png') no-repeat center;
+    background-size: cover;
+    -webkit-box-shadow: inset 0px 200px 41px -56px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: inset 0px 200px 41px -56px rgba(0, 0, 0, 0.62);
+    box-shadow: inset 0px 200px 41px -56px rgba(0, 0, 0, 0.62);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      width: 100%;
+      padding: 0;
+      height: 375px;
+    }
+
+    .gradient {
+      position: absolute;
+      bottom: 0;
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(to top, #ffffff, #ffffff00);
+    }
+  }
+}
+ .wrap-footer-toolbar {
+    width: 100%;
+    border-top: 5px solid #f28c17;
+    .footer {
+      padding: 15px 0px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      p {
-        margin: 0;
-        @media (max-width: 510px) {
-          display: none;
+      color: #000;
+      @media (max-width: 991px) {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      &__links {
+        cursor: pointer;
+        text-transform: uppercase;
+
+        a {
+          margin: 0 5px;
+          @media (max-width: $screen-xs-min) {
+            font-size: 15px;
+          }
+          @media (max-width: 340px) {
+            font-size: 13px;
+          }
         }
       }
-      img {
-        padding-left: 10px;
-        @media (max-width: 510px) {
-          padding-top: 10px;
+
+      &__sponsor {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin: 0;
+          @media (max-width: 510px) {
+            display: none;
+          }
+        }
+
+        img {
+          padding-left: 10px;
+          @media (max-width: 510px) {
+            padding-top: 10px;
+          }
         }
       }
     }
   }
-}
