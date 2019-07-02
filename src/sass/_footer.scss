@@ -119,10 +119,12 @@
     }
     .second-section-content {
       height: auto;
+      width: 35%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin-top: 100px;
+      font-family: $font-family-century;
       @media (max-width: 1440px) {
         margin: 100px auto 0;
       }
@@ -169,7 +171,7 @@
         .wrap-email {
           display: flex;
           width: 100%;
-          max-width: 450px;
+          max-width: 470px;
           height: 40px;
           margin: 0 auto;
           @media (max-width: 991px) {
@@ -196,6 +198,7 @@
           }
 
           button {
+            font-family: $font-family-sans-pro;
             width: 100%;
             max-width: 130px;
             outline: 0;

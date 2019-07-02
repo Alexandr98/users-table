@@ -9,7 +9,7 @@
   @media (max-width: 991px) {
     max-height: 600px;
   }
-  @media (max-width: 425px) {
+  @media (max-width: $screen-xs-min) {
     max-height: 400px;
   }
   .gradient {
@@ -27,12 +27,12 @@
 
 
   .badge {
-    max-width: 400px;
+    max-width: 440px;
     position: absolute;
     top: 70%;
     width: 100%;
-    right: 10%;
-    padding: 20px;
+    right: 13%;
+    padding: 30px;
     border-radius: 0;
     font-weight: 300;
     background: #fff;
@@ -48,7 +48,8 @@
       right: 5%;
     }
     @media (max-width: 991px) {
-      top: 20%
+      top: 20%;
+      padding: 20px;
     }
     @media (max-width: 425px) {
       padding: 10px;
@@ -88,7 +89,7 @@
   box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
   @media (max-width: $screen-xs-min) {
     padding: 10px;
-    margin-top: -80px;
+    margin-top: -15px;
   }
   .section-select {
     display: flex;
@@ -417,16 +418,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: $font-family-century;
     @media (max-width: $screen-xs-min) {
       margin-top: 40px;
     }
+
     .logo {
       display: flex;
       align-items: center;
       h2 {
         margin-right: 10px;
         font-size: 40px;
-        font-weight: 200;
+        font-weight: 400;
+        @media (max-width: $screen-xs-min) {
+          margin-bottom: 15px;
+        }
         @media (max-width: 580px) {
           flex-direction: column;
           font-size: 30px;
@@ -444,10 +450,14 @@
     p {
       text-align: center;
       font-size: 28px;
-      font-weight: 300;
+      font-weight: 400;
+      letter-spacing: 1px;
       @media (max-width: 580px) {
         flex-direction: column;
         font-size: 23px;
+      }
+      @media (max-width: $screen-xs-min) {
+        font-size: 17px;
       }
       span {
         color: #338ac9;
@@ -477,9 +487,10 @@
     }
     p {
       margin: 0;
+      font-family: $font-family-century;
       @media (max-width: $screen-xs-min) {
         text-align: center;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 300;
       }
     }
@@ -554,6 +565,7 @@
       position: relative;
       .slide-title {
         color: #fff;
+        font-family: $font-family-century;
         position: absolute;
         top: 20px;
         left: 0;
@@ -568,13 +580,14 @@
         }
         h2{
           font-size: 50px;
-          font-weight: $font-weight-thin;
+          font-weight: 400;
           @media (max-width: 1440px) {
             font-size: 30px;
           }
         }
         p {
-          font-weight: 300;
+          margin-top: 30px;
+          font-weight: 400;
           font-size: 25px;
           @media (max-width: 1440px) {
             font-size: 18px;
@@ -654,34 +667,48 @@
 .wrap-social {
   width: 100%;
   background: #3b7eb1;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 120px;
-  color: $color-white;
   text-transform: uppercase;
-  font-weight: 200;
-  @media (max-width: 991px) {
-    display: none;
-  }
-  p {
-    font-weight: 300;
-    margin: 0;
-    padding-right: 5px;
-  }
-  a {
-    i {
+  .social {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: $color-white;
+    font-weight: 200;
+    font-size: 25px;
+    @media (max-width: 1445px) {
+      font-size: 20px;
+      justify-content: center;
+    }
+    @media (max-width: 1150px) {
+      font-size: 17px;
+      justify-content: center;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    p {
+      font-weight: 300;
+      margin: 0;
       padding-right: 5px;
     }
-    &:not(:last-child) {
-      &::after {
-        content: '|';
-        margin: 0 10px;
+
+    a {
+      i {
+        padding-right: 5px;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: '|';
+          margin: 0 10px;
+        }
       }
     }
   }
 }
+
 .news-container {
   @media (max-width: 640px) {
     padding: 0;
@@ -691,13 +718,17 @@
 .wrap-mews {
   display: flex;
   margin-top: 220px;
+  font-family: $font-family-century;
   @media (max-width: $screen-sm-min) {
     margin-top: 90px;
   }
   @media (max-width: $screen-xs-min) {
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .image {
+    img{
+      width: 445px;
+    }
     @media (max-width: 1200px) {
       img {
         width: 350px
@@ -731,21 +762,24 @@
     @media (max-width: 510px) {
       font-size: 15px;
     }
-    p {
-      font-weight: 200;
-      font-size: 27px;
-      margin-bottom: 50px;
-      @media (max-width: 1380px) {
-        font-size: 20px;
-      }
-      @media (max-width: 1200px) {
-        text-align: center;
-      }
-      @media (max-width: 640px) {
-        margin-bottom: 10px;
-      }
-      @media (max-width: 991px) {
-        font-size: 15px;
+    .news-subtitle {
+      p {
+        font-weight: 200;
+        font-size: 24px;
+        margin-bottom: 50px;
+        line-height: 30px;
+        @media (max-width: 1380px) {
+          font-size: 20px;
+        }
+        @media (max-width: 1200px) {
+          text-align: center;
+        }
+        @media (max-width: 640px) {
+          margin-bottom: 10px;
+        }
+        @media (max-width: 991px) {
+          font-size: 15px;
+        }
       }
     }
     .news-title {
@@ -786,7 +820,6 @@
         p{
           font-weight: 200;
           color: #716969;
-          padding: 20px 0;
           font-size: 20px;
           text-align: left;
           @media (max-width: 1280px) {
@@ -803,13 +836,15 @@
           display: flex;
           align-items: center;
           color: #3b7eb1;
+          margin-bottom: 25px;
           img {
             margin-right: 5px;
             @media (max-width: 991px) {
               width: 50px;
             }
           }
-          h2 {
+          h3 {
+            font-size: 28px;
             margin: 0;
             text-transform: uppercase;
             @media (max-width: 1280px) {
@@ -860,6 +895,8 @@
 .wrap-carousel {
   #carousel-after-news {
     .slide-title {
+      font-family: $font-family-century;
+      font-weight: 400;
       @media (max-width: $screen-xxs-min) {
         top: 5px;
         h2 {
@@ -870,6 +907,7 @@
         }
         p {
           font-size: 25px;
+          letter-spacing: 1px;
           @media(max-width: 1440px){
             font-size: 18px;
           }

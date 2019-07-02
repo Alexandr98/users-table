@@ -162,6 +162,7 @@
 
     .icons {
       font-size: 20px;
+      font-size: 20px;
       @media(max-width: $screen-xs-min) {
         margin-top: 20px;
       }
@@ -257,10 +258,11 @@
 
   // FIRST COLUMN
   .wrap-about {
+    font-family: $font-family-century;
     &__title {
       h2 {
         font-size: 40px;
-        font-weight: 300;
+        font-weight: 400;
         color: #7f7f7f;
         @media(max-width: $screen-xs-min){
           font-size: 30px;
@@ -268,6 +270,7 @@
       }
 
       p {
+        font-weight: 400;
         padding-bottom: 45px;
         font-size: 25px;
         color: #3b7eb1;
@@ -284,6 +287,9 @@
         font-size: 20px;
         font-weight: $font-weight-thin;
         color: #7f7f7f;
+        @media(max-width: $screen-xs-min){
+          font-size: 16px;
+        }
       }
     }
   }
@@ -291,6 +297,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 120px;
+    font-family: $font-family-century;
     @media(max-width: 1200px){
       flex-direction: column;
     }
@@ -301,7 +308,7 @@
       .title {
         h2 {
           font-size: 40px;
-          font-weight: 300;
+          font-weight: 400;
           color: #7f7f7f;
           @media(max-width: $screen-xs-min){
             font-size: 30px;
@@ -309,12 +316,13 @@
         }
 
         p {
+          font-weight: 400;
           padding-bottom: 45px;
           font-size: 26px;
           color: #3b7eb1;
           text-transform: uppercase;
           @media(max-width: $screen-xs-min){
-            font-size: 25px;
+            font-size: 20px;
             padding-bottom: 15px;
           }
         }
@@ -325,6 +333,10 @@
           font-size: 20px;
           font-weight: $font-weight-thin;
           color: #7f7f7f;
+          @media(max-width: $screen-xs-min){
+            font-size: 16px;
+            margin-bottom: 40px;
+          }
         }
       }
     }
@@ -395,6 +407,7 @@
     }
   }
   .wrap-place {
+    font-family: $font-family-century;
     margin-top: 120px;
     @media(max-width:$screen-xs-min){
       margin-top: 40px;
@@ -402,7 +415,7 @@
     &__title {
       h2 {
         font-size: 40px;
-        font-weight: 300;
+        font-weight: 400;
         color: #7f7f7f;
         @media(max-width: $screen-xs-min){
           font-size: 30px;
@@ -410,12 +423,13 @@
       }
 
       p {
+        font-weight: 400;
         padding-bottom: 45px;
         font-size: 25px;
         color: #3b7eb1;
         text-transform: uppercase;
         @media(max-width: $screen-xs-min){
-          font-size: 25px;
+          font-size: 20px;
           padding-bottom: 15px;
         }
       }
@@ -426,10 +440,14 @@
         font-size: 20px;
         font-weight: $font-weight-thin;
         color: #7f7f7f;
+        @media(max-width: $screen-xs-min){
+          font-size: 16px;
+        }
       }
     }
   }
   .wrap-map {
+    font-family: $font-family-century;
     margin-top: 120px;
     @media(max-width: $screen-xs-min){
       margin-top: 40px;
@@ -437,7 +455,7 @@
     &__title {
       h2 {
         font-size: 40px;
-        font-weight: 300;
+        font-weight: 400;
         color: #7f7f7f;
         margin-bottom: 50px;
         @media(max-width: 991px){
@@ -470,7 +488,7 @@
             margin-top: 20px;
           }
           @media(max-width: $screen-xs-min){
-            font-size: 30px;
+            font-size: 26px;
             margin-top: 30px;
           }
         }
@@ -542,6 +560,7 @@
 
   // SECOND COLUMN
   .request-disclosure {
+    font-family: $font-family-century;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -577,6 +596,7 @@
     }
   }
   .wrap-equipment {
+    font-family: $font-family-century;
     margin-top: 40px;
     width: 100%;
     border-top: 2px solid #338ac9;
@@ -631,6 +651,7 @@
     }
   }
   .communal-area {
+    font-family: $font-family-century;
     margin-top: 100px;
     width: 100%;
     border-top: 2px solid #338ac9;
@@ -689,6 +710,7 @@
     }
   }
   .wrap-certificate {
+    font-family: $font-family-century;
     margin-top: 100px;
     width: 100%;
     border-top: 2px solid #338ac9;

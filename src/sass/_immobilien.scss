@@ -7,9 +7,7 @@
   background-size: cover;
   position: relative;
   @media (max-width: $screen-xs-min) {
-    background: url(../assets/Main-mobile.png) no-repeat center;
     max-height: 260px;
-    background-size: contain;
   }
   .gradient {
     position: fixed;
@@ -47,7 +45,7 @@
     }
     .search-result {
       color: #7ea6de;
-      margin-top: 15px;
+      margin-top: 25px;
       text-align: right;
       @media (max-width: 970px) {
         margin-top: 0px;
@@ -92,10 +90,16 @@
   }
   .search-filters {
     width: 100%;
+    h2{
+      font-size: 40px;
+      font-family: $font-family-century;
+    }
     .search-span {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 25px;
       span {
+        font-family: $font-family-century;
         margin: 5px;
         position: relative;
         color: #fff;
@@ -142,8 +146,9 @@
     border-color: #f8f9fa;
   }
 }
-.wrap-service {
-  width: 700px;
+.wrap-service{
+  font-family: $font-family-century;
+  width: 1000px;
   height: 400px;
   position: relative;
   margin: 100px auto;
@@ -154,7 +159,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 100px;
+  padding: 30px 130px;
+  @media (max-width: 1100px) {
+    width: 600px;
+  }
   @media (max-width: $screen-sm-min) {
     width: 100%;
     padding: 20px 70px;
@@ -182,16 +190,25 @@
     font-weight: 300;
     line-height: 22px;
     h2 {
-      font-weight: 300;
+      font-size: 50px;
+      font-weight: 400;
+      @media(max-width: $screen-xs-min){
+        font-size: 28px;
+      }
     }
     p {
-      font-weight: 300;
-      padding-top: 10px;
+      font-size: 25px;
+      font-weight: 400;
+      padding-top: 30px;
+      @media(max-width: $screen-xs-min){
+        padding-top: 10px;
+        font-size: 18px;
+      }
     }
   }
   button {
     width: 100%;
-    max-width: 350px;
+    max-width: 440px;
     outline: 0;
     color: #fff;
     margin: 0 auto;

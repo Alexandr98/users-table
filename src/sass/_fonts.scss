@@ -36,9 +36,54 @@
 
 @font-face {
 	font-family: 'SansPro';
-	font-weight: 600;
+	font-weight: 700;
 	src: url('../fonts/SourceSansPro-SemiBold.eot') format('eot'),
 	url('../fonts/SourceSansPro-SemiBold.svg') format('svg'),
 	url('../fonts/SourceSansPro-SemiBold.ttf') format('ttf'),
 	url('../fonts/SourceSansPro-SemiBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'CenturyGothic';
+	font-weight: 600;
+	src: url('../fonts/CenturyGothic-Bold.eot') format('eot'),
+	url('../fonts/CenturyGothic-Bold.ttf') format('ttf'),
+	url('../fonts/CenturyGothic-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'CenturyGothic';
+	font-weight: 400;
+	src: url('../fonts/CenturyGothic.eot') format('eot'),
+	url('../fonts/CenturyGothic.ttf') format('ttf'),
+	url('../fonts/CenturyGothic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 300;
+	src: url('../fonts/Roboto-Light.eot') format('eot'),
+	url('../fonts/Roboto-Light.svg') format('svg'),
+	url('../fonts/Roboto-Light.ttf') format('ttf'),
+	url('../fonts/Roboto-Light.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 400;
+	src: url('../fonts/Roboto-Regular.eot') format('eot'),
+	url('../fonts/Roboto-Regular.svg') format('svg'),
+	url('../fonts/Roboto-Regular.ttf') format('ttf'),
+	url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 500;
+	src: url('../fonts/Roboto-Medium.eot') format('eot'),
+	url('../fonts/Roboto-Medium.svg') format('svg'),
+	url('../fonts/Roboto-Medium.ttf') format('ttf'),
+	url('../fonts/Roboto-Medium.woff') format('woff');
 }
