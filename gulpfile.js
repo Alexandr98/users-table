@@ -57,7 +57,6 @@ gulp.task(
 gulp.task(
 	'update',
 	gulp.series('clean-build', function(done) {
-		console.log('updateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdate')
 		const manifest = gulp.src(assets + '/rev-manifest.json');
 		return gulp
 			.src(html_dest)
