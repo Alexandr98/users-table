@@ -28,6 +28,15 @@ body {
   font-family: $font-family-sans-pro;
 }
 
+.custom-col{
+  padding-left: 30px;
+  padding-right: 30px;
+  @media (max-width: 640px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .search-products {
   width: 300px;
   position: relative;
