@@ -49,16 +49,21 @@
     }
     @media (max-width: 991px) {
       top: 20%;
-      padding: 20px;
+    }
+    @media (max-width: $screen-xs-min) {
+      max-width: 190px;
+      padding: 10px;
     }
     @media (max-width: 425px) {
       padding: 10px;
-      max-width: 210px;
     }
     h2 {
       font-weight: 300;
       @media (max-width: 1479px) {
         font-size: 1.5rem;
+      }
+      @media (max-width: $screen-xs-min) {
+        font-size: 20px;
       }
     }
     p {
@@ -67,11 +72,13 @@
       font-weight: 400;
       text-transform: uppercase;
       border-left: 2px solid #f28c17;
-      padding: 0 10px;
+      padding-left: 10px;
       margin-bottom: 0;
       white-space: pre-wrap;
       @media (max-width: 1479px) {
         font-size: 13px;
+      }
+      @media (max-width: $screen-xs-min) {
       }
     }
   }
@@ -752,7 +759,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 60px;
-
+    margin-right: -70px;
+    @media (max-width: 1600px) {
+      margin-right: 0px;
+    }
     @media (max-width: 1200px) {
       margin-left: 30px;
     }
@@ -766,10 +776,11 @@
       p {
         font-weight: 200;
         font-size: 24px;
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         line-height: 30px;
         @media (max-width: 1380px) {
           font-size: 20px;
+          margin-bottom: 40px;
         }
         @media (max-width: 1200px) {
           text-align: center;
@@ -813,7 +824,7 @@
     }
     .wrap-news-card{
       .news-card{
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         @media (max-width: 640px) {
           margin-bottom: 20px;
         }
@@ -822,6 +833,9 @@
           color: #716969;
           font-size: 20px;
           text-align: left;
+          @media (max-width: 1366px) {
+            font-size: 18px;
+          }
           @media (max-width: 1280px) {
             font-size: 17px;
           }
@@ -844,9 +858,12 @@
             }
           }
           h3 {
-            font-size: 28px;
+            font-size: 30px;
             margin: 0;
             text-transform: uppercase;
+            @media (max-width: 1366px) {
+              font-size: 25px;
+            }
             @media (max-width: 1280px) {
               font-size: 25px;
             }
