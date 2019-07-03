@@ -93,6 +93,12 @@
     h2{
       font-size: 40px;
       font-family: $font-family-century;
+      @media(max-width: 480px){
+        font-size: 30px;
+      }
+      @media(max-width: 320px){
+        font-size: 23px;
+      }
     }
     .search-span {
       display: flex;
