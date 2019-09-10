@@ -28,7 +28,6 @@ $(document).ready(function() {
     });
     $('#close-modal').click(function(){
         $('.wrap-slider-modal').removeClass('open');
-
     });
     $('.wrap-slider-modal').bind('click', function () {
         $('.wrap-slider-modal').removeClass('open');

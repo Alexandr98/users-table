@@ -1,949 +1,110 @@
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-}
-
-html,
-body {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
 }
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
 
 html {
-  height: 100%;
-}
-h2, p{
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: $color-black;
-  background: $color-white;
-  font-family: $font-family-sans-pro;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-.custom-col{
-  padding-left: 30px;
-  padding-right: 30px;
-  @media (max-width: 640px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {max-width: 100%;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
 }
 
-.search-products {
-  width: 300px;
-  position: relative;
-  padding: 10px 0;
-  .text-input {
-    outline: none;
-    width: 100%;
-    background-color: #338ac9;
-    height: 32px;
-    color: #fff;
-    border-radius: 4px;
-    border: 1px solid #338ac9;
-    padding-left: 17px;
-  }
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
 
-  input[placeholder] {
-    text-overflow: ellipsis;
-  }
-  ::placeholder{
-    color: #fff;
-  }
+select, input, textarea {font: 99% sans-serif;}
 
-  .search-button {
-    background: #338ac9;
-    border: 0;
-    color: #fff;
-    display: inline-flex;
-    justify-content: center;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    transform: translate(0, -50%);
-  }
+table {font-size: inherit; font: 100%;}
 
-  .search-button:focus {
-    outline: none;
-  }
-}
+small {font-size: 85%;}
 
-.link {
-  text-decoration: underline;
-  cursor: pointer;
-}
+strong {font-weight: bold;}
 
-.wrapper {
-  margin: 0 auto;
-  position: relative;
-}
+td, td img {vertical-align: top;}
 
-.form-contact-us {
-  width: 100%;
-  border-top: 2px solid #338ac9;
-  background: #fff;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  padding: 15px 0;
-  -webkit-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
-  -moz-box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
-  box-shadow: 7px 7px 7px -4px rgba(0, 0, 0, 0.43);
-  @media(max-width: $screen-xs-min){
-    margin-top: 50px;
-    margin-bottom: 40px;
-  }
-  p {
-    color: #837c7e;
-    font-style: italic;
-    padding: 15px;
-    font-size: 20px;
-    @media(max-width: $screen-xs-min){
-      font-size: 25px;
-    }
-  }
-  form {
-    display: flex;
-    @media (max-width: 1150px) {
-      flex-direction: column;
-    }
-    .wrap-input-contact {
-      width: 100%;
-      .contact-input {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @media (max-width: 1150px) {
-          flex-direction: column;
-        }
-        input {
-          height: 40px;
-          width: 100%;
-          max-width: 200px;
-          border: 1px solid #7ea6de;
-          color: #7ea6de;
-          outline: none;
-          padding: 0 10px;
-          border-radius: 4px;
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
 
-          @media (max-width: 1370px) {
-            max-width: 160px;
-          }
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
 
-          @media (max-width: 1280px) {
-            font-size: 12px;
-          }
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
 
-          @media (max-width: 1150px) {
-            max-width: 100%;
-            margin: 5px 0;
-          }
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
 
-        }
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
 
-        ::placeholder {
-          text-overflow: ellipsis;
-          color: #7ea6de;
-        }
-        .select2-container {
-          @media (max-width: 1155px) {
-            width: 100%;
-            margin: 5px 0;
-          }
-        }
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
 
-        .select2-selection.select2-selection--single {
-          outline: none;
-          width: 200px;
-          height: 40px;
-          border: 1px solid #7ea6de;
-          display: flex;
-          align-items: center;
-          @media (max-width: 1200px) {
-            font-size: 12px;
-          }
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
 
-          @media (max-width: 1150px) {
-            width: 100%;
-          }
-
-          .select2-selection__arrow {
-            color: #7ea6de;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 7px;
-            right: 7px;
-            b {
-              display: none !important;
-            }
-          }
-
-          .select2-selection__rendered {
-            color: #7ea6de;
-            padding: 0 8px;
-          }
-        }
-      }
-
-      .contact-textarea {
-        textarea {
-          width: 100%;
-          border: 1px solid #7ea6de;
-          color: #7ea6de;
-          height: 110px;
-          padding: 10px;
-          display: block;
-          margin-top: 20px;
-        }
-
-        ::placeholder {
-          text-overflow: ellipsis;
-          color: #7ea6de;
-        }
-      }
-    }
-    .button-send {
-      width: 100%;
-      @media (max-width: 1150px) {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      @media (max-width: 767px) {
-        margin-top: 0;
-      }
-      button {
-        height: 40px;
-        width: 100%;
-        border-radius: 4px;
-        color: #fff;
-        background: #f28c17;
-        padding: 0 15px;
-        display: flex;
-        justify-content: space-between;
-        border-color: #f28c17;
-        align-items: center;
-      }
-      .wrap-checkbox-send {
-        margin-top: 20px;
-        font-size: 14px;
-        @media (max-width: 767px) {
-          margin-top: 0;
-          margin: 10px 0;
-        }
-        .checkbox {
-          display: block;
-          margin: 0 auto;
-          /* Base for label styling */
-
-          [type="checkbox"]:not(:checked),
-          [type="checkbox"]:checked {
-            position: absolute;
-            left: -100%;
-            outline: none;
-          }
-
-          [type="checkbox"]:not(:checked) + label,
-          [type="checkbox"]:checked + label {
-            position: relative;
-            display: inline-block;
-            padding-left: 25px;
-            cursor: pointer;
-            outline: none;
-            font-weight: 200;
-            margin-bottom: 0;
-          }
-
-          [type="checkbox"]:not(:checked) + label:before,
-          [type="checkbox"]:checked + label:before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 12px;
-            width: 17px;
-            height: 17px;
-            border: 1px solid #7f7f7f;
-            background: #fff;
-            border-radius: 0;
-            outline: none;
-            transform: translate(-50%, -50%);
-          }
-
-          /* checked mark aspect */
-
-          [type="checkbox"]:not(:checked) + label:after,
-          [type="checkbox"]:checked + label:after {
-            content: '✔';
-            position: absolute;
-            top: 1px;
-            left: 4px;
-            font-size: 14px;
-            color: #7f7f7f;
-            transition: all .2s;
-          }
-
-          /* checked mark aspect changes */
-
-          [type="checkbox"]:not(:checked) + label:after {
-            opacity: 0;
-            transform: scale(0);
-            outline: none;
-          }
-
-          [type="checkbox"]:checked + label:after {
-            opacity: 1;
-            transform: scale(1);
-            outline: none;
-          }
-
-          /* disabled checkbox */
-
-          [type="checkbox"]:disabled:not(:checked) + label:before,
-          [type="checkbox"]:disabled:checked + label:before {
-            box-shadow: none;
-            border-color: #bbb;
-            background-color: #ddd;
-            outline: none;
-          }
-
-          [type="checkbox"]:disabled:checked + label:after {
-            color: #999;
-            outline: none;
-          }
-
-          [type="checkbox"]:disabled + label {
-            color: #aaa;
-            outline: none;
-          }
-
-          /* accessibility */
-
-          [type="checkbox"]:checked:focus + label:before,
-          label:hover:before,
-          label:active,
-          label:focus,
-          input,
-          input[type="checkbox"],
-          label,
-          input:focus,
-          input:active,
-          input[type="checkbox"]:active,
-          input[type="checkbox"]:focus {
-            outline: none;
-          }
-
-          a {
-            cursor: pointer;
-            color: #4c84d2;
-            padding: 0 5px;
-            height: 20px;
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-}
-
-.wrap-container {
-  max-width: 1445px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.wrap-card {
-  h2 {
-    color: #338ac9;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    @media(max-width: $screen-xs-min){
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  }
-  .wrap-cards{
-    margin-bottom: 190px;
-    @media(max-width: 991px){
-      margin-bottom: 30px;
-    }
-    @media(max-width: $screen-xs-min){
-      margin-bottom: 0px;
-    }
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 30px;
-    height: auto;
-    -webkit-box-shadow: 4px 6px 10px -2px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 4px 6px 10px -2px rgba(0, 0, 0, 0.29);
-    box-shadow: 4px 6px 10px -2px rgba(0, 0, 0, 0.29);
-
-    .card-slider {
-      overflow: hidden;
-      position: relative;
-      span {
-        display: block;
-        position: absolute;
-        color: #fff;
-        width: 100%;
-        max-width: 200px;
-        transform: rotate(-45deg);
-        left: -60px;
-        top: 30px;
-        text-align: center;
-        z-index: 30;
-      }
-      .col-carousel {
-        margin: 0;
-        padding: 0;
-      }
-
-      .owl-carousel {
-        overflow: hidden;
-      }
-
-      /* owl nav */
-      .owl-nav {
-        color: #fff;
-        font-size: 30px;
-      }
-
-      .owl-prev span, .owl-next span {
-        color: #FFF;
-      }
-
-      .owl-prev span:hover,
-      .owl-next span:hover {
-        color: #8199A3;
-      }
-
-      .owl-prev, .owl-next {
-        position: absolute;
-        top: 0;
-        height: 100%;
-      }
-
-      .owl-prev {
-        left: 10px;
-      }
-
-      .owl-next {
-        right: 10px;
-      }
-
-      button:focus, button:active {
-        outline: none;
-      }
-    }
-
-    .card-slider.orange{
-      span {
-        background-color: #f38e1b;
-      }
-    }
-
-    .card-slider.red{
-      span {
-        background-color: #f40606
-      }
-    }
-
-    .card-slider.blue{
-      span {
-        background-color: #338ac9
-      }
-    }
-
-    .card-about {
-      width: 100%;
-
-      .card-title {
-        color: #4996ce;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
-        @media (max-width: $screen-xxs-min) {
-          padding: 0px 5px;
-        }
-        p {
-          margin: 0;
-        }
-      }
-
-      .card-icons {
-        width: 100%;
-        padding: 0 10px;
-        @media (max-width: $screen-xxs-min) {
-          padding: 0px 5px;
-        }
-        p {
-          color: #757575;
-          font-size: 16px;
-        }
-
-        .wrap-icons {
-          display: flex;
-          justify-content: space-between;
-
-          .icon {
-            width: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #3b7eb1;
-            img {
-              @media (max-width: 640px) {
-                width: 35px;
-              }
-              @media (max-width: 400px) {
-                width: 30px;
-              }
-            }
-            p {
-              color: #3b7eb1;
-              @media (max-width: 400px) {
-                font-size: 13px;
-              }
-            }
-          }
-        }
-      }
-
-      .card-price {
-        font-size: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 10px;
-        width: 100%;
-        background: #3b7eb1;
-        color: $color-white;
-
-        .price {
-          p {
-            margin: 0;
-          }
-        }
-
-        .price-icon {
-          a {
-            cursor: pointer;
-            padding: 0 5px;
-          }
-        }
-      }
-    ;
-    }
-  }
-
-  .after-card {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    .search-products {
-      @media (max-width: $screen-xs-max) {
-        width: 100%;
-      }
-      @media (max-width: $screen-xs-min) {
-        padding: 0 35px;
-      }
-    }
-  }
-}
-
-.select2-search--dropdown {
-  display: none !important;
-}
-
-.select2-dropdown {
-  border-radius: 0 !important;
-}
-
-.select2-results {
-  .select2-results__option {
-    display: flex;
-    font-size: 13px;
-    justify-content: center;
-    img {
-      width: 20px !important;
-    }
-  }
-}
-
-.wrap-form {
-  width: 100%;
-  position: fixed;
-  top: 20%;
-  left: 0;
-  z-index: 101;
-  @media (max-width: 991px) {
-    display: none;
-  }
-
-  .collapse:not(.show){
-    transform: translate(-200%, 0);
-    display: none;
-  }
-
-  .width{
-    width: 100%;
-    max-width: 800px;
-  }
-
-    .width.show {
-    display: block;
-    visibility: visible;
-    z-index: 400;
-    width: 100%;
-    transform: translate(0, 0);
-    }
-
-  .collapsing {
-    visibility: visible;
-    height: auto !important;
-    transition: transform 0.3ms ease !important;
-  }
-
-  .wrap-contacts {
-    width: 100%;
-    font-weight: 300;
-    max-width: 800px;
-    height: 100vh;
-    max-height: 520px;
-    font-family: $font-family-roboto;
-    background: #f1e8e8;
-    display: flex;
-    @media (max-width: 1479px) {
-      max-height: 490px;
-    }
-
-    @media (max-width: 1479px) {
-      max-width: 650px;
-    }
-
-    .form-contacts {
-      width: 60%;
-      border-right: 1px solid #fff;
-      margin: 15px;
-      @media (max-width: 1479px) {
-        font-size: 14px;
-      }
-      @media (max-width: 1199px) {
-        width: 50%;
-      }
-
-      h2 {
-        font-weight: 300;
-        color: #f28c17;
-      }
-
-      .contact-form {
-        color: #7a7376;
-        overflow: hidden;
-        margin-right: 20px;
-
-        .wrap-name {
-          display: flex;
-          justify-content: space-between;
-
-          input {
-            border: none;
-            height: 25px;
-            width: 210px;
-            padding: 5px;
-            display: block;
-            color: #4f484a;
-            @media (max-width: 1479px) {
-              width: 150px;
-            }
-          }
-        }
-
-        label {
-          font-weight: 500;
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 2px;
-        }
-
-        .input {
-          input {
-            border: none;
-            height: 25px;
-            width: 100%;
-            padding: 5px;
-            display: block;
-            color: #4f484a;
-          }
-        }
-
-        textarea {
-          border: none;
-          height: 110px;
-          padding: 5px;
-          display: block;
-          color: #4f484a;
-          margin-top: 5px;
-        }
-
-        .checkbox {
-          display: block;
-          margin: 0 auto;
-          /* Base for label styling */
-
-          [type="checkbox"]:not(:checked),
-          [type="checkbox"]:checked {
-            position: absolute;
-            left: -100%;
-            outline: none;
-          }
-
-          [type="checkbox"]:not(:checked) + label,
-          [type="checkbox"]:checked + label {
-            position: relative;
-            display: inline-block;
-            padding-left: 20px;
-            cursor: pointer;
-            outline: none;
-            font-weight: 300;
-          }
-
-          [type="checkbox"]:not(:checked) + label:before,
-          [type="checkbox"]:checked + label:before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 12px;
-            width: 17px;
-            height: 17px;
-            border: 1px solid #7f7f7f;
-            background: #fff;
-            border-radius: 0;
-            outline: none;
-            transform: translate(-50%, -50%);
-          }
-
-          /* checked mark aspect */
-
-          [type="checkbox"]:not(:checked) + label:after,
-          [type="checkbox"]:checked + label:after {
-            content: '✔';
-            position: absolute;
-            top: 1px;
-            left: 4px;
-            font-size: 14px;
-            color: #7f7f7f;
-            transition: all .2s;
-          }
-
-          /* checked mark aspect changes */
-
-          [type="checkbox"]:not(:checked) + label:after {
-            opacity: 0;
-            transform: scale(0);
-            outline: none;
-          }
-
-          [type="checkbox"]:checked + label:after {
-            opacity: 1;
-            transform: scale(1);
-            outline: none;
-          }
-
-          /* disabled checkbox */
-
-          [type="checkbox"]:disabled:not(:checked) + label:before,
-          [type="checkbox"]:disabled:checked + label:before {
-            box-shadow: none;
-            border-color: #bbb;
-            background-color: #ddd;
-            outline: none;
-          }
-
-          [type="checkbox"]:disabled:checked + label:after {
-            color: #999;
-            outline: none;
-          }
-
-          [type="checkbox"]:disabled + label {
-            color: #aaa;
-            outline: none;
-          }
-
-          /* accessibility */
-
-          [type="checkbox"]:checked:focus + label:before,
-          label:hover:before,
-          label:active,
-          label:focus,
-          input,
-          input[type="checkbox"],
-          label,
-          input:focus,
-          input:active,
-          input[type="checkbox"]:active,
-          input[type="checkbox"]:focus {
-            outline: none;
-          }
-
-          a {
-            cursor: pointer;
-            color: #f28c17;
-            padding: 0 5px;
-            height: 20px;
-            text-decoration: underline;
-          }
-        }
-
-        .checkboxs {
-          input[type="checkbox"] {
-            background: #fff;
-          }
-
-          display: flex;
-          align-items: center;
-
-          p {
-            color: #f28c17;
-            margin: 0 10px 0 0;
-          }
-
-          span {
-            margin-right: 3px;
-            display: flex;
-            align-items: center;
-          }
-        }
-
-        button {
-          width: 100%;
-          border: none;
-          outline: none;
-          color: #fff;
-          margin-top: 15px;
-          background: #f28c17;
-          @media (max-width: 1479px) {
-            margin-top: 10px;
-          }
-        }
-      }
-
-      .last {
-        margin-right: 0;
-      }
-
-      input:focus, textarea:focus {
-        background-color: #fffaf3;
-        border: none;
-        outline: none;
-      }
-    }
-
-    .contacts-info {
-      width: 40%;
-      height: 100%;
-      color: #8d8d8d;
-      padding: 15px 5px;
-      display: flex;
-      flex-direction: column;
-      @media (max-width: 1479px) {
-        font-size: 13px;
-      }
-
-      h2 {
-        font-weight: 300;
-        color: #f28c17;
-      }
-
-      .contacts {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-        .phones {
-          display: flex;
-          justify-content: space-between;
-          margin-right: 30px;
-          span {
-            font-weight: 400;
-          }
-          a{
-            width: 160px;
-            text-align: left;
-          }
-          a:hover {
-            color: #f28c17;
-          }
-        }
-      }
-
-      .social {
-        margin-top: 40px;
-        p {
-          font-weight: $font-weight-regular;
-          margin: 0;
-        }
-
-        i {
-          cursor: pointer;
-          padding-right: 15px;
-          font-size: 35px;
-        }
-      }
-      .information{
-        margin-top: 40px;
-        h2{
-          margin-bottom: 20px;
-        }
-        p {
-          font-weight: 300;
-        }
-      }
-    }
-  }
-
-  .form-toggler {
-    height: 90px;
-    color: #fff;
-    background-color: #f28c18;
-    border: 0;
-    border-radius: 0;
-    -webkit-box-shadow: 15px 13px 17px -10px rgba(0, 0, 0, 0.26);
-    -moz-box-shadow: 15px 13px 17px -10px rgba(0, 0, 0, 0.26);
-    box-shadow: 15px 13px 17px -10px rgba(0, 0, 0, 0.26);
-
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      display: flex;
-      align-items: center;
-    }
-
-    i {
-      margin-left: 5px;
-    }
-
-    &:active {
-      color: #fff;
-      background-color: #f28c18;
-      border: 0;
-    }
-  }
-
-}
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
